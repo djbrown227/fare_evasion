@@ -1,0 +1,295 @@
+Year,Quarter,Metric,Mode,Avg_Value,Var_Value
+2020,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.69,0.13
+2020,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.69,0.07
+2020,Q1,% of Comparable Pre-Pandemic Day,Buses,0.53,0.17
+2020,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.46,0.15
+2020,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.52,0.03
+2020,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.48,0.15
+2020,Q1,% of Comparable Pre-Pandemic Day,Subways,0.5,0.13
+2020,Q1,Total Estimated Ridership,Buses,1028122.06,729288090757.6
+2020,Q1,Total Estimated Ridership,LIRR,116942.71,13044761815.28
+2020,Q1,Total Estimated Ridership,Metro-North,125508.61,3685474596.25
+2020,Q1,Total Estimated Ridership,Staten Island Railway,6470.45,44526249.72
+2020,Q1,Total Estimated Ridership,Subways,2375007.19,3676938258921.96
+2020,Q1,Total Scheduled Trips,Access-A-Ride,18010.65,106777898.97
+2020,Q1,Total Traffic,Bridges and Tunnels,620486.13,58744403563.52
+2020,Q2,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.32,0.01
+2020,Q2,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.52,0.02
+2020,Q2,% of Comparable Pre-Pandemic Day,Buses,0.01,0.0
+2020,Q2,% of Comparable Pre-Pandemic Day,LIRR,0.09,0.01
+2020,Q2,% of Comparable Pre-Pandemic Day,Metro-North,0.06,0.0
+2020,Q2,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.08,0.0
+2020,Q2,% of Comparable Pre-Pandemic Day,Subways,0.12,0.0
+2020,Q2,Total Estimated Ridership,Buses,16929.59,55227273.87
+2020,Q2,Total Estimated Ridership,LIRR,21053.8,259989458.38
+2020,Q2,Total Estimated Ridership,Metro-North,13164.79,41809156.06
+2020,Q2,Total Estimated Ridership,Staten Island Railway,926.46,358228.32
+2020,Q2,Total Estimated Ridership,Subways,559721.2,55170614370.23
+2020,Q2,Total Scheduled Trips,Access-A-Ride,8406.01,11603199.37
+2020,Q2,Total Traffic,Bridges and Tunnels,499376.29,24935899593.5
+2020,Q3,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.62,0.01
+2020,Q3,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.83,0.0
+2020,Q3,% of Comparable Pre-Pandemic Day,Buses,0.17,0.05
+2020,Q3,% of Comparable Pre-Pandemic Day,LIRR,0.28,0.01
+2020,Q3,% of Comparable Pre-Pandemic Day,Metro-North,0.15,0.0
+2020,Q3,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.19,0.0
+2020,Q3,% of Comparable Pre-Pandemic Day,Subways,0.27,0.0
+2020,Q3,Total Estimated Ridership,Buses,331568.61,197634926000.17
+2020,Q3,Total Estimated Ridership,LIRR,64398.77,331345476.16
+2020,Q3,Total Estimated Ridership,Metro-North,32949.46,56289083.33
+2020,Q3,Total Estimated Ridership,Staten Island Railway,2252.37,1372275.55
+2020,Q3,Total Estimated Ridership,Subways,1201056.96,111619434768.94
+2020,Q3,Total Scheduled Trips,Access-A-Ride,15842.49,20656194.96
+2020,Q3,Total Traffic,Bridges and Tunnels,791018.5,5141523546.78
+2020,Q4,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.68,0.01
+2020,Q4,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.83,0.01
+2020,Q4,% of Comparable Pre-Pandemic Day,Buses,0.51,0.01
+2020,Q4,% of Comparable Pre-Pandemic Day,LIRR,0.3,0.01
+2020,Q4,% of Comparable Pre-Pandemic Day,Metro-North,0.17,0.0
+2020,Q4,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.2,0.02
+2020,Q4,% of Comparable Pre-Pandemic Day,Subways,0.32,0.0
+2020,Q4,Total Estimated Ridership,Buses,907293.59,50933177725.78
+2020,Q4,Total Estimated Ridership,LIRR,69031.71,475698492.87
+2020,Q4,Total Estimated Ridership,Metro-North,36613.98,81344605.74
+2020,Q4,Total Estimated Ridership,Staten Island Railway,2497.9,1887549.65
+2020,Q4,Total Estimated Ridership,Subways,1467822.58,143577721125.61
+2020,Q4,Total Scheduled Trips,Access-A-Ride,18051.02,27183036.59
+2020,Q4,Total Traffic,Bridges and Tunnels,746204.85,9336279501.87
+2021,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.69,0.01
+2021,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.83,0.01
+2021,Q1,% of Comparable Pre-Pandemic Day,Buses,0.49,0.01
+2021,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.27,0.01
+2021,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.16,0.0
+2021,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.21,0.01
+2021,Q1,% of Comparable Pre-Pandemic Day,Subways,0.34,0.0
+2021,Q1,Total Estimated Ridership,Buses,862352.43,53844176922.29
+2021,Q1,Total Estimated Ridership,LIRR,59325.3,517684295.16
+2021,Q1,Total Estimated Ridership,Metro-North,33420.87,84799085.11
+2021,Q1,Total Estimated Ridership,Staten Island Railway,2429.47,1575092.05
+2021,Q1,Total Estimated Ridership,Subways,1455494.39,157787690463.93
+2021,Q1,Total Scheduled Trips,Access-A-Ride,17089.87,27403028.81
+2021,Q1,Total Traffic,Bridges and Tunnels,709320.62,15323688569.38
+2021,Q2,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.76,0.01
+2021,Q2,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.93,0.0
+2021,Q2,% of Comparable Pre-Pandemic Day,Buses,0.56,0.01
+2021,Q2,% of Comparable Pre-Pandemic Day,LIRR,0.39,0.03
+2021,Q2,% of Comparable Pre-Pandemic Day,Metro-North,0.27,0.01
+2021,Q2,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.23,0.02
+2021,Q2,% of Comparable Pre-Pandemic Day,Subways,0.42,0.01
+2021,Q2,Total Estimated Ridership,Buses,1045234.6,57328534339.95
+2021,Q2,Total Estimated Ridership,LIRR,88706.27,627820708.65
+2021,Q2,Total Estimated Ridership,Metro-North,60040.09,481816238.19
+2021,Q2,Total Estimated Ridership,Staten Island Railway,3118.45,2995223.27
+2021,Q2,Total Estimated Ridership,Subways,1946608.6,186182802488.71
+2021,Q2,Total Scheduled Trips,Access-A-Ride,19464.85,22965913.38
+2021,Q2,Total Traffic,Bridges and Tunnels,877145.02,4574903919.56
+2021,Q3,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.76,0.0
+2021,Q3,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.96,0.0
+2021,Q3,% of Comparable Pre-Pandemic Day,Buses,0.59,0.0
+2021,Q3,% of Comparable Pre-Pandemic Day,LIRR,0.47,0.02
+2021,Q3,% of Comparable Pre-Pandemic Day,Metro-North,0.4,0.01
+2021,Q3,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.34,0.02
+2021,Q3,% of Comparable Pre-Pandemic Day,Subways,0.51,0.01
+2021,Q3,Total Estimated Ridership,Buses,1100630.43,76687908673.24
+2021,Q3,Total Estimated Ridership,LIRR,111069.35,782065199.06
+2021,Q3,Total Estimated Ridership,Metro-North,89272.7,567234676.13
+2021,Q3,Total Estimated Ridership,Staten Island Railway,3975.07,4160061.07
+2021,Q3,Total Estimated Ridership,Subways,2251406.22,267784709997.67
+2021,Q3,Total Scheduled Trips,Access-A-Ride,19177.8,21736666.69
+2021,Q3,Total Traffic,Bridges and Tunnels,906437.08,4250274675.61
+2021,Q4,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.73,0.01
+2021,Q4,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.98,0.0
+2021,Q4,% of Comparable Pre-Pandemic Day,Buses,0.65,0.01
+2021,Q4,% of Comparable Pre-Pandemic Day,LIRR,0.58,0.04
+2021,Q4,% of Comparable Pre-Pandemic Day,Metro-North,0.49,0.02
+2021,Q4,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.45,0.04
+2021,Q4,% of Comparable Pre-Pandemic Day,Subways,0.59,0.01
+2021,Q4,Total Estimated Ridership,Buses,1170128.24,124794211151.09
+2021,Q4,Total Estimated Ridership,LIRR,126520.53,1247697496.65
+2021,Q4,Total Estimated Ridership,Metro-North,106272.09,762764694.61
+2021,Q4,Total Estimated Ridership,Staten Island Railway,5040.07,5823928.15
+2021,Q4,Total Estimated Ridership,Subways,2658097.78,479122006981.21
+2021,Q4,Total Scheduled Trips,Access-A-Ride,19017.57,25653913.74
+2021,Q4,Total Traffic,Bridges and Tunnels,882298.9,5701834796.16
+2022,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.71,0.01
+2022,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.95,0.01
+2022,Q1,% of Comparable Pre-Pandemic Day,Buses,0.59,0.01
+2022,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.52,0.03
+2022,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.44,0.01
+2022,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.4,0.01
+2022,Q1,% of Comparable Pre-Pandemic Day,Subways,0.56,0.01
+2022,Q1,Total Estimated Ridership,Buses,1084874.78,120403110525.86
+2022,Q1,Total Estimated Ridership,LIRR,113286.57,1780019296.45
+2022,Q1,Total Estimated Ridership,Metro-North,95278.78,1179941659.93
+2022,Q1,Total Estimated Ridership,Staten Island Railway,4535.33,4260026.99
+2022,Q1,Total Estimated Ridership,Subways,2457892.44,500395705680.34
+2022,Q1,Total Scheduled Trips,Access-A-Ride,18096.33,32622259.53
+2022,Q1,Total Traffic,Bridges and Tunnels,812007.73,15149924427.75
+2022,Q2,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.82,0.0
+2022,Q2,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.99,0.0
+2022,Q2,% of Comparable Pre-Pandemic Day,Buses,0.64,0.0
+2022,Q2,% of Comparable Pre-Pandemic Day,LIRR,0.62,0.03
+2022,Q2,% of Comparable Pre-Pandemic Day,Metro-North,0.56,0.01
+2022,Q2,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.38,0.02
+2022,Q2,% of Comparable Pre-Pandemic Day,Subways,0.61,0.0
+2022,Q2,Total Estimated Ridership,Buses,1209488.24,97792736923.59
+2022,Q2,Total Estimated Ridership,LIRR,146462.99,1858034642.77
+2022,Q2,Total Estimated Ridership,Metro-North,129843.98,1223133521.27
+2022,Q2,Total Estimated Ridership,Staten Island Railway,4974.66,5949013.65
+2022,Q2,Total Estimated Ridership,Subways,2845572.22,433091843402.0
+2022,Q2,Total Scheduled Trips,Access-A-Ride,21086.12,24306083.11
+2022,Q2,Total Traffic,Bridges and Tunnels,937801.69,2411470297.28
+2022,Q3,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.87,0.0
+2022,Q3,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.99,0.0
+2022,Q3,% of Comparable Pre-Pandemic Day,Buses,0.63,0.0
+2022,Q3,% of Comparable Pre-Pandemic Day,LIRR,0.64,0.02
+2022,Q3,% of Comparable Pre-Pandemic Day,Metro-North,0.59,0.01
+2022,Q3,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.41,0.02
+2022,Q3,% of Comparable Pre-Pandemic Day,Subways,0.62,0.0
+2022,Q3,Total Estimated Ridership,Buses,1171809.29,80473891272.45
+2022,Q3,Total Estimated Ridership,LIRR,152720.72,1803258086.29
+2022,Q3,Total Estimated Ridership,Metro-North,133424.22,1283206468.37
+2022,Q3,Total Estimated Ridership,Staten Island Railway,4785.13,5808128.4
+2022,Q3,Total Estimated Ridership,Subways,2766122.97,431990537414.36
+2022,Q3,Total Scheduled Trips,Access-A-Ride,21760.16,25412611.79
+2022,Q3,Total Traffic,Bridges and Tunnels,937127.67,1945204075.5
+2022,Q4,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.87,0.01
+2022,Q4,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.0,0.0
+2022,Q4,% of Comparable Pre-Pandemic Day,Buses,0.65,0.01
+2022,Q4,% of Comparable Pre-Pandemic Day,LIRR,0.69,0.04
+2022,Q4,% of Comparable Pre-Pandemic Day,Metro-North,0.65,0.02
+2022,Q4,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.43,0.04
+2022,Q4,% of Comparable Pre-Pandemic Day,Subways,0.66,0.01
+2022,Q4,Total Estimated Ridership,Buses,1178676.18,121701641012.53
+2022,Q4,Total Estimated Ridership,LIRR,156788.49,2455355863.24
+2022,Q4,Total Estimated Ridership,Metro-North,145375.87,1608905276.49
+2022,Q4,Total Estimated Ridership,Staten Island Railway,5205.85,7139723.84
+2022,Q4,Total Estimated Ridership,Subways,3020273.63,625783371056.98
+2022,Q4,Total Scheduled Trips,Access-A-Ride,22506.95,32944696.01
+2022,Q4,Total Traffic,Bridges and Tunnels,897026.8,4272256997.13
+2023,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.96,0.0
+2023,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.01,0.0
+2023,Q1,% of Comparable Pre-Pandemic Day,Buses,0.67,0.0
+2023,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.71,0.02
+2023,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.65,0.01
+2023,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.45,0.01
+2023,Q1,% of Comparable Pre-Pandemic Day,Subways,0.7,0.01
+2023,Q1,Total Estimated Ridership,Buses,1203335.09,105970249237.03
+2023,Q1,Total Estimated Ridership,LIRR,155424.51,2651396694.45
+2023,Q1,Total Estimated Ridership,Metro-North,140459.6,2009938135.05
+2023,Q1,Total Estimated Ridership,Staten Island Railway,5312.78,6311215.82
+2023,Q1,Total Estimated Ridership,Subways,3048104.9,599302025135.35
+2023,Q1,Total Scheduled Trips,Access-A-Ride,23828.14,35136833.38
+2023,Q1,Total Traffic,Bridges and Tunnels,864317.66,3841294688.03
+2023,Q2,% of Comparable Pre-Pandemic Day,Access-A-Ride,0.99,0.0
+2023,Q2,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.01,0.0
+2023,Q2,% of Comparable Pre-Pandemic Day,Buses,0.65,0.0
+2023,Q2,% of Comparable Pre-Pandemic Day,LIRR,0.77,0.04
+2023,Q2,% of Comparable Pre-Pandemic Day,Metro-North,0.7,0.02
+2023,Q2,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.45,0.01
+2023,Q2,% of Comparable Pre-Pandemic Day,Subways,0.7,0.01
+2023,Q2,Total Estimated Ridership,Buses,1224860.3,96542810047.59
+2023,Q2,Total Estimated Ridership,LIRR,179561.81,2635544854.6
+2023,Q2,Total Estimated Ridership,Metro-North,162596.34,2105196428.29
+2023,Q2,Total Estimated Ridership,Staten Island Railway,5493.97,5775395.81
+2023,Q2,Total Estimated Ridership,Subways,3253748.21,558358324532.12
+2023,Q2,Total Scheduled Trips,Access-A-Ride,25292.76,31414671.14
+2023,Q2,Total Traffic,Bridges and Tunnels,952998.54,2583442686.16
+2023,Q3,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.03,0.01
+2023,Q3,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.0,0.0
+2023,Q3,% of Comparable Pre-Pandemic Day,Buses,0.62,0.0
+2023,Q3,% of Comparable Pre-Pandemic Day,LIRR,0.78,0.03
+2023,Q3,% of Comparable Pre-Pandemic Day,Metro-North,0.7,0.01
+2023,Q3,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.49,0.01
+2023,Q3,% of Comparable Pre-Pandemic Day,Subways,0.69,0.01
+2023,Q3,Total Estimated Ridership,Buses,1138338.75,79541533810.52
+2023,Q3,Total Estimated Ridership,LIRR,183334.71,2554959869.04
+2023,Q3,Total Estimated Ridership,Metro-North,158998.97,2193011101.81
+2023,Q3,Total Estimated Ridership,Staten Island Railway,5238.77,4698277.5
+2023,Q3,Total Estimated Ridership,Subways,3044842.6,535071048841.61
+2023,Q3,Total Scheduled Trips,Access-A-Ride,25564.95,34167490.34
+2023,Q3,Total Traffic,Bridges and Tunnels,945183.37,3359212187.58
+2023,Q4,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.04,0.01
+2023,Q4,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.02,0.0
+2023,Q4,% of Comparable Pre-Pandemic Day,Buses,0.61,0.01
+2023,Q4,% of Comparable Pre-Pandemic Day,LIRR,0.85,0.07
+2023,Q4,% of Comparable Pre-Pandemic Day,Metro-North,0.78,0.04
+2023,Q4,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.51,0.04
+2023,Q4,% of Comparable Pre-Pandemic Day,Subways,0.71,0.01
+2023,Q4,Total Estimated Ridership,Buses,1098371.62,102253408694.74
+2023,Q4,Total Estimated Ridership,LIRR,192254.88,3325428969.73
+2023,Q4,Total Estimated Ridership,Metro-North,173654.84,2420541806.47
+2023,Q4,Total Estimated Ridership,Staten Island Railway,5675.96,6056492.61
+2023,Q4,Total Estimated Ridership,Subways,3257294.14,711151473892.76
+2023,Q4,Total Scheduled Trips,Access-A-Ride,26919.68,41684545.25
+2023,Q4,Total Traffic,Bridges and Tunnels,919126.51,3988701329.48
+2024,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.13,0.01
+2024,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.01,0.01
+2024,Q1,% of Comparable Pre-Pandemic Day,Buses,0.6,0.0
+2024,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.84,0.04
+2024,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.74,0.01
+2024,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.48,0.02
+2024,Q1,% of Comparable Pre-Pandemic Day,Subways,0.71,0.01
+2024,Q1,Total Estimated Ridership,Buses,1069107.46,83369419313.54
+2024,Q1,Total Estimated Ridership,LIRR,182621.84,3544432517.74
+2024,Q1,Total Estimated Ridership,Metro-North,159758.48,2731766683.21
+2024,Q1,Total Estimated Ridership,Staten Island Railway,5386.98,5605328.09
+2024,Q1,Total Estimated Ridership,Subways,3097833.71,657826226944.81
+2024,Q1,Total Scheduled Trips,Access-A-Ride,28025.76,48114774.47
+2024,Q1,Total Traffic,Bridges and Tunnels,864854.29,7155662406.1
+2024,Q2,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.2,0.01
+2024,Q2,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.01,0.0
+2024,Q2,% of Comparable Pre-Pandemic Day,Buses,0.59,0.0
+2024,Q2,% of Comparable Pre-Pandemic Day,LIRR,0.89,0.06
+2024,Q2,% of Comparable Pre-Pandemic Day,Metro-North,0.79,0.02
+2024,Q2,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.49,0.01
+2024,Q2,% of Comparable Pre-Pandemic Day,Subways,0.71,0.01
+2024,Q2,Total Estimated Ridership,Buses,1108932.35,69548184692.48
+2024,Q2,Total Estimated Ridership,LIRR,206968.86,3243725595.39
+2024,Q2,Total Estimated Ridership,Metro-North,182974.04,2512952472.49
+2024,Q2,Total Estimated Ridership,Staten Island Railway,5744.96,4856023.75
+2024,Q2,Total Estimated Ridership,Subways,3325457.18,584785643541.06
+2024,Q2,Total Scheduled Trips,Access-A-Ride,30704.52,38706366.12
+2024,Q2,Total Traffic,Bridges and Tunnels,954337.57,2673294304.0
+2024,Q3,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.25,0.01
+2024,Q3,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.0,0.0
+2024,Q3,% of Comparable Pre-Pandemic Day,Buses,0.59,0.0
+2024,Q3,% of Comparable Pre-Pandemic Day,LIRR,0.89,0.03
+2024,Q3,% of Comparable Pre-Pandemic Day,Metro-North,0.78,0.01
+2024,Q3,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.54,0.02
+2024,Q3,% of Comparable Pre-Pandemic Day,Subways,0.7,0.01
+2024,Q3,Total Estimated Ridership,Buses,1096568.04,80067419781.95
+2024,Q3,Total Estimated Ridership,LIRR,211141.93,3219712027.73
+2024,Q3,Total Estimated Ridership,Metro-North,178527.82,2328396376.37
+2024,Q3,Total Estimated Ridership,Staten Island Railway,5644.34,4654115.54
+2024,Q3,Total Estimated Ridership,Subways,3150803.99,575115461666.41
+2024,Q3,Total Scheduled Trips,Access-A-Ride,31318.33,43539490.62
+2024,Q3,Total Traffic,Bridges and Tunnels,947737.53,1896836596.67
+2024,Q4,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.28,0.02
+2024,Q4,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,1.03,0.0
+2024,Q4,% of Comparable Pre-Pandemic Day,Buses,0.67,0.01
+2024,Q4,% of Comparable Pre-Pandemic Day,LIRR,0.98,0.11
+2024,Q4,% of Comparable Pre-Pandemic Day,Metro-North,0.88,0.05
+2024,Q4,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.59,0.06
+2024,Q4,% of Comparable Pre-Pandemic Day,Subways,0.77,0.01
+2024,Q4,Total Estimated Ridership,Buses,1193332.14,104779299442.19
+2024,Q4,Total Estimated Ridership,LIRR,217074.45,3520050229.46
+2024,Q4,Total Estimated Ridership,Metro-North,191934.7,2419918423.84
+2024,Q4,Total Estimated Ridership,Staten Island Railway,6314.39,6838739.25
+2024,Q4,Total Estimated Ridership,Subways,3476176.89,735200223609.61
+2024,Q4,Total Scheduled Trips,Access-A-Ride,32937.87,52423139.76
+2024,Q4,Total Traffic,Bridges and Tunnels,924009.39,2702479418.5
+2025,Q1,% of Comparable Pre-Pandemic Day,Access-A-Ride,1.33,0.06
+2025,Q1,% of Comparable Pre-Pandemic Day,Bridges and Tunnels,0.99,0.0
+2025,Q1,% of Comparable Pre-Pandemic Day,Buses,0.59,0.01
+2025,Q1,% of Comparable Pre-Pandemic Day,LIRR,0.88,0.04
+2025,Q1,% of Comparable Pre-Pandemic Day,Metro-North,0.75,0.01
+2025,Q1,% of Comparable Pre-Pandemic Day,Staten Island Railway,0.52,0.02
+2025,Q1,% of Comparable Pre-Pandemic Day,Subways,0.75,0.01
+2025,Q1,Total Estimated Ridership,Buses,986453.11,98170058829.61
+2025,Q1,Total Estimated Ridership,LIRR,184805.78,4133956511.19
+2025,Q1,Total Estimated Ridership,Metro-North,157338.44,3340104187.53
+2025,Q1,Total Estimated Ridership,Staten Island Railway,5386.33,5766114.0
+2025,Q1,Total Estimated Ridership,Subways,3050981.78,717499253637.94
+2025,Q1,Total Scheduled Trips,Access-A-Ride,30774.56,87843926.78
+2025,Q1,Total Traffic,Bridges and Tunnels,803272.78,4115071440.19
