@@ -1,0 +1,16 @@
+title: Fare Evasion Visualization
+description: Visualizing NYC Transit Fare Evasion Since COVID
+theme: minima
+
+# Enable GitHub Pages safe mode plugins
+plugins:
+  - jekyll-feed
+
+# For GitHub Pages, serve from root (no baseurl)
+baseurl: ""
+
+# Include assets folder so CSS/JS loads correctly
+include:
+  - assets
+
+markdown: kramdown
