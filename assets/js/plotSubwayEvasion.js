@@ -14,6 +14,7 @@ async function drawSubwayEvasion() {
     height: 500,
     marginLeft: 0,
     marginBottom: 0,
+    fontSize: 6,
     y: {
       label: "Subway Fare Evasion Rate",
       grid: true,
@@ -34,7 +35,7 @@ async function drawSubwayEvasion() {
         y1: d => d["Fare Evasion"] - d["Margin of Error"],
         y2: d => d["Fare Evasion"] + d["Margin of Error"],
         stroke: "gray",
-        strokeWidth: 2,
+        strokeWidth: 20,
         strokeOpacity: 0.6,
       }),
       // Caps at ends of error bars
@@ -42,7 +43,7 @@ async function drawSubwayEvasion() {
         x: d => d["Time Period"],
         y: d => d["Fare Evasion"] - d["Margin of Error"],
         stroke: "gray",
-        strokeWidth: 2,
+        strokeWidth: 20,
         strokeOpacity: 0.6,
         x1: d => d["Time Period"],
         x2: d => d["Time Period"],
@@ -53,7 +54,7 @@ async function drawSubwayEvasion() {
         x: d => d["Time Period"],
         y: d => d["Fare Evasion"] + d["Margin of Error"],
         stroke: "gray",
-        strokeWidth: 2,
+        strokeWidth: 20,
         strokeOpacity: 0.6,
         x1: d => d["Time Period"],
         x2: d => d["Time Period"],
@@ -65,7 +66,7 @@ async function drawSubwayEvasion() {
         x: "Time Period",
         y: "Fare Evasion",
         stroke: "dodgerblue",
-        strokeWidth: 3,
+        strokeWidth: 30,
         curve: "catmull-rom",
       }),
       Plot.dot(data, {
