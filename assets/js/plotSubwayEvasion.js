@@ -10,10 +10,10 @@ async function drawSubwayEvasion() {
   
   // Create Plot with error bars
   const plot = Plot.plot({
-    width: 900,
-    height: 450,
-    marginLeft: 70,
-    marginBottom: 90,
+    width:100,
+    height: 100,
+    marginLeft: 0,
+    marginBottom: 0,
     y: {
       label: "Subway Fare Evasion Rate",
       grid: true,
