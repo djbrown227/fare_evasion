@@ -10,8 +10,8 @@ async function drawSubwayEvasion() {
   
   // Create Plot with error bars
   const plot = Plot.plot({
-    width:100,
-    height: 100,
+    width:500,
+    height: 500,
     marginLeft: 0,
     marginBottom: 0,
     y: {
