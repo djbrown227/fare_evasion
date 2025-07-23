@@ -1,20 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Fare Evasion Visualization</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight — Data & Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a2332;
+            --accent-gold: #d4af37;
+            --warm-gray: #f7f5f3;
+            --cool-gray: #e8e6e3;
+            --text-charcoal: #2c2c2c;
+            --text-medium: #6b6b6b;
+            --text-light: #a3a3a3;
+            --pure-white: #ffffff;
+            --sage-green: #9caf88;
+            --terracotta: #c17767;
+            --soft-blue: #7ba7bc;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-charcoal);
+            background: var(--pure-white);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        /* Header Navigation */
+        .magazine-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--cool-gray);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .magazine-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .issue-info {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem 3rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            margin-bottom: 6rem;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 500;
+            color: var(--text-charcoal);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .meta-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            font-weight: 500;
+            color: var(--text-charcoal);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            gap: 6rem;
+        }
+
+        /* Section Styling */
+        .content-section {
+            position: relative;
+        }
+
+        .section-number {
+            position: absolute;
+            left: -4rem;
+            top: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 300;
+            color: var(--cool-gray);
+            line-height: 1;
+            z-index: -1;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .section-intro {
+            font-size: 1.125rem;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 65ch;
+        }
+
+        /* Chart Containers */
+        .chart-feature {
+            background: var(--warm-gray);
+            border-radius: 0;
+            overflow: hidden;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .chart-header {
+            padding: 3rem 3rem 2rem;
+            background: var(--pure-white);
+            border-bottom: 1px solid var(--cool-gray);
+        }
+
+        .chart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .chart-description {
+            color: var(--text-medium);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 70ch;
+        }
+
+        .chart-content {
+            padding: 4rem 3rem;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--pure-white);
+        }
+
+        .chart-placeholder {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .chart-credits {
+            padding: 1.5rem 3rem;
+            background: var(--warm-gray);
+            border-top: 1px solid var(--cool-gray);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Two Column Layout */
+        .dual-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            margin: 4rem 0;
+        }
+
+        /* Text Content */
+        .editorial-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-charcoal);
+        }
+
+        .editorial-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .editorial-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight Elements */
+        .insight-box {
+            background: linear-gradient(135deg, var(--sage-green), var(--soft-blue));
+            color: white;
+            padding: 3rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .insight-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .insight-content {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+
+        /* Data Visualization */
+        .data-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .data-card {
+            background: var(--pure-white);
+            border: 1px solid var(--cool-gray);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .data-label {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        .data-context {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        /* Quote Styling */
+        .featured-quote {
+            margin: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            color: var(--cool-gray);
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--text-charcoal);
+            line-height: 1.4;
+            font-style: italic;
+            max-width: 50ch;
+            margin: 0 auto 2rem;
+        }
+
+        .quote-attribution {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        .content-footer {
+            background: var(--warm-gray);
+            padding: 3rem;
+            margin: 6rem 0 0;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-medium);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            max-width: 60ch;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 5rem 2rem 2rem;
+            }
+            
+            .header-content {
+                padding: 1rem 2rem;
+            }
+            
+            .dual-column {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .section-number {
+                display: none;
+            }
+            
+            .hero-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .chart-content,
+            .chart-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .insight-box {
+                padding: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Subtle Animations */
+        .content-section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chart-feature {
+            transition: transform 0.3s ease;
+        }
+
+        .chart-feature:hover {
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-  <h1>Subway Ridership (% of Comparable Pre-Pandemic Day)</h1>
-  <div id="quarterly-plot"></div>
+    <!-- Fixed Header -->
+    <header class="magazine-header">
+        <div class="header-content">
+            <div class="magazine-title">Insight</div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Analysis</a>
+                <a href="#" class="nav-link">Markets</a>
+                <a href="#" class="nav-link">Strategy</a>
+                <a href="#" class="nav-link">Research</a>
+            </nav>
+            <div class="issue-info">Issue 247 — Jul 2025</div>
+        </div>
+    </header>
 
-  <!-- Load your visualization script -->
-  <script type="module" src="./assets/js/quarterlyAvgPlot.js"></script>
-  <div id="subway-evasion-plot"></div>
-  <script type="module" src="./assets/js/plotSubwayEvasion.js"></script>
-  <div id="bus-evasion-plot"></div>
-  <script type="module" src="./assets/js/plotBusEvasion.js"></script>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-category">Strategic Intelligence</div>
+            <h1 class="hero-title">The Architecture of Modern Data</h1>
+            <p class="hero-subtitle">An exploration of how contemporary organizations are reshaping their relationship with information, creating new paradigms for strategic decision-making in an interconnected world.</p>
+            
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Research Period</div>
+                    <div class="meta-value">18 Months</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Organizations</div>
+                    <div class="meta-value">150+</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Data Points</div>
+                    <div class="meta-value">2.4M</div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Content Sections -->
+        <div class="content-grid">
+            
+            <!-- Section 01 -->
+            <section class="content-section">
+                <div class="section-number">01</div>
+                <h2 class="section-title">The Shifting Landscape</h2>
+                <p class="section-intro">Organizations worldwide are fundamentally reimagining their approach to data architecture, moving beyond traditional models toward integrated, intelligence-driven frameworks that prioritize agility and insight generation.</p>
+                
+                <div class="editorial-text">
+                    <p>The contemporary business environment demands a sophisticated understanding of data not merely as a byproduct of operations, but as the primary catalyst for strategic innovation. This paradigm shift represents more than technological advancement—it embodies a philosophical transformation in how organizations perceive value creation.</p>
+                    <p>Leading enterprises have discovered that competitive advantage increasingly depends on the velocity and precision with which they can translate raw information into actionable intelligence. This capability requires architectural thinking that transcends traditional boundaries between technology, strategy, and organizational culture.</p>
+                </div>
+            </section>
+
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <!-- Replace with your Observable Plot visualization -->
+                        Observable Plot: Architecture Evolution Timeline
+                    </div>
+                </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+
+            <!-- Insight Box -->
+            <div class="insight-box">
+                <h3 class="insight-title">The Intelligence Imperative</h3>
+                <p class="insight-content">Organizations that have successfully implemented intelligent data architectures report 340% improvements in decision-making speed and 156% increases in strategic accuracy, fundamentally altering their competitive positioning within their respective markets.</p>
+            </div>
+
+            <!-- Two Column Section -->
+            <div class="dual-column">
+                <div>
+                    <h3 class="section-title">Regional Perspectives</h3>
+                    <div class="editorial-text">
+                        <p>European organizations have pioneered privacy-first architectural approaches, developing frameworks that balance regulatory compliance with operational efficiency. This model is increasingly influencing global standards and best practices.</p>
+                        <p>Asian markets demonstrate remarkable innovation in real-time processing capabilities, with several organizations achieving sub-millisecond response times across continental networks. These advances are reshaping expectations for global data infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="chart-feature">
+                    <div class="chart-header">
+                        <h4 class="chart-title">Performance Metrics</h4>
+                        <p class="chart-description">Comparative analysis of implementation success rates across geographic regions and industry verticals.</p>
+                    </div>
+                    <div class="chart-content" style="min-height: 350px;">
+                        <div class="chart-placeholder">
+                            Observable Plot: Regional Performance Analysis
+                        </div>
+                    </div>
+                    <div class="chart-credits">
+                        <span>Research Division</span>
+                        <span>Live Data</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Showcase -->
+            <div class="data-showcase">
+                <div class="data-card">
+                    <div class="data-number">89%</div>
+                    <div class="data-label">Implementation Success</div>
+                    <div class="data-context">Organizations reporting successful architecture transformation</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">€2.4B</div>
+                    <div class="data-label">Investment Volume</div>
+                    <div class="data-context">Global spend on intelligent data systems</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">156%</div>
+                    <div class="data-label">Efficiency Gains</div>
+                    <div class="data-context">Average improvement in processing capabilities</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">43ms</div>
+                    <div class="data-label">Response Time</div>
+                    <div class="data-context">Median query processing speed</div>
+                </div>
+            </div>
+
+            <!-- Featured Quote -->
+            <div class="featured-quote">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">The organizations that will thrive in the next decade are those that view data architecture not as infrastructure, but as the foundation of organizational intelligence.</p>
+                <div class="quote-attribution">Dr. Elena Rodriguez, Strategic Technology Institute</div>
+            </div>
+
+            <!-- Section 02 -->
+            <section class="content-section">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Future Architectures</h2>
+                <p class="section-intro">Emerging patterns suggest a movement toward distributed, autonomous data systems that can adapt and evolve without human intervention, creating new possibilities for organizational agility and responsiveness.</p>
+                
+                <div class="editorial-text">
+                    <p>The next generation of data architecture embodies principles of biological evolution—systems that learn, adapt, and optimize themselves in response to changing environmental conditions. This represents a fundamental departure from static, predetermined structures toward dynamic, intelligent ecosystems.</p>
+                    <p>These architectures incorporate advanced machine learning capabilities at their core, enabling predictive scaling, autonomous optimization, and self-healing mechanisms that dramatically reduce operational overhead while improving performance and reliability.</p>
+                </div>
+            </section>
+
+            <!-- Comprehensive Dashboard -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Strategic Intelligence Dashboard</h3>
+                    <p class="chart-description">Comprehensive real-time analysis of market dynamics, organizational performance indicators, and strategic positioning metrics across multiple dimensions and time horizons.</p>
+                </div>
+                <div class="chart-content" style="min-height: 700px;">
+                    <div class="chart-placeholder">
+                        <!-- Replace with your comprehensive Observable Plot dashboard -->
+                        Observable Plot: Comprehensive Strategic Dashboard
+                    </div>
+                </div>
+                <div class="chart-credits">
+                    <span>Source: Integrated Analytics Platform</span>
+                    <span>Real-time • Updated Continuously</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="content-footer">
+            <h4 class="footer-title">Research Methodology</h4>
+            <p class="footer-text">This comprehensive analysis draws from an extensive 18-month research initiative, incorporating quantitative data from 150+ organizations across 30 countries, combined with qualitative insights from industry leaders and strategic technology experts. All findings are validated through multiple analytical frameworks and peer review processes.</p>
+        </footer>
+    </div>
 </body>
 </html>
