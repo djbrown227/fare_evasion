@@ -9,10 +9,11 @@ async function drawBusEvasion() {
   const timePeriodOrder = data.map(d => d["Time Period"]);
 
   const plot = Plot.plot({
+    title: "For charts, an informative title",
     width: 900,
     height: 450,
-    marginLeft: 70,
-    marginBottom: 90,
+    marginLeft: 0,
+    marginBottom: 0,
     y: {
       label: "Fare Evasion Rate",
       grid: true,
@@ -44,6 +45,7 @@ async function drawBusEvasion() {
         y: "Fare Evasion",
         fill: "Trip Type",
         r: 5,
+        tip:true
       }),
     ],
   });

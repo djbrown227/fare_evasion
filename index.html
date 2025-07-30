@@ -497,6 +497,10 @@
         .chart-feature:hover {
             transform: translateY(-2px);
         }
+            /* Control the font size of the chart */
+        .plot-container svg {
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -520,7 +524,28 @@
             <div class="hero-category">Strategic Intelligence</div>
             <h1 class="hero-title">The Architecture of Modern Data</h1>
             <p class="hero-subtitle">An exploration of how contemporary organizations are reshaping their relationship with information, creating new paradigms for strategic decision-making in an interconnected world.</p>
-            
+            <div class="data-showcase">
+                <div class="data-card">
+                    <div class="data-number">89%</div>
+                    <div class="data-label">Implementation Success</div>
+                    <div class="data-context">Organizations reporting successful architecture transformation</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">€2.4B</div>
+                    <div class="data-label">Investment Volume</div>
+                    <div class="data-context">Global spend on intelligent data systems</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">156%</div>
+                    <div class="data-label">Efficiency Gains</div>
+                    <div class="data-context">Average improvement in processing capabilities</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">43ms</div>
+                    <div class="data-label">Response Time</div>
+                    <div class="data-context">Median query processing speed</div>
+                </div>
+            </div> 
             <div class="hero-meta">
                 <div class="meta-item">
                     <div class="meta-label">Research Period</div>
@@ -561,10 +586,10 @@
                 <div class="chart-content">
                     <div class="chart-placeholder">
                         <!-- Replace with your Observable Plot visualization -->
-                        <div id="quarterly-plot"></div>
+                        <div id="quarterly-plot" class="plot-container"></div>
 
                         <!-- Load your visualization script -->
-                        <script type="module" src="./assets/js/quarterlyAvgPlot.js"></script>                      </div>
+                        <script type="module" src="./assets/js/quarterlyAvgPlot.js"></script> </div>
                     </div>
                 <div class="chart-credits">
                     <span>Source: Global Enterprise Research Initiative</span>
@@ -595,7 +620,7 @@
                     </div>
                     <div class="chart-content" style="min-height: 350px;">
                         <div class="chart-placeholder">
-                            Observable Plot: Regional Performance Analysis
+                            <p>European organizations have pioneered privacy-first architectural approaches, developing frameworks that balance regulatory compliance with operational efficiency. This model is increasingly influencing global standards and best practices.</p>
                         </div>
                     </div>
                     <div class="chart-credits">
@@ -651,18 +676,38 @@
             <!-- Comprehensive Dashboard -->
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Strategic Intelligence Dashboard</h3>
-                    <p class="chart-description">Comprehensive real-time analysis of market dynamics, organizational performance indicators, and strategic positioning metrics across multiple dimensions and time horizons.</p>
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
-                <div class="chart-content" style="min-height: 700px;">
+                <div class="chart-content">
                     <div class="chart-placeholder">
-                        <!-- Replace with your comprehensive Observable Plot dashboard -->
-                        Observable Plot: Comprehensive Strategic Dashboard
+                        <!-- Replace with your Observable Plot visualization -->
+                        <div id="subway-evasion-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/plotSubwayEvasion.js"></script> </div>
                     </div>
-                </div>
                 <div class="chart-credits">
-                    <span>Source: Integrated Analytics Platform</span>
-                    <span>Real-time • Updated Continuously</span>
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="bus-evasion-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/plotBusEvasion.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
                 </div>
             </div>
 
