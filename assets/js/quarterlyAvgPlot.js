@@ -30,8 +30,8 @@ async function drawQuarterlyAvgPlot() {
         x: "Year-Quarter",
         y: "Avg_Value",
         fill: "steelblue",
-        r: 4,
-        tip:true
+        r: 8,
+        tip: true
       })
     ],
     x: {
