@@ -1,13 +1,18 @@
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-async function drawSimpleBarChart() {
+async function drawBarChartWithLabels() {
   const raw = await d3.csv("data/processed/graph_2.csv", d3.autoType);
 
-  // Combine Year and Quarter into one label (e.g., "2023 Q2")
+  // Create a combined Year + Quarter label
   raw.forEach(d => {
     d.label = `${d.Year} ${d.Quarter}`;
   });
+
+  // Pick bars to label
+  const labeled = raw.filter(d =>
+    d.label === "2024 Q2" || d.label === "2021 Q4" || d.label === "2022 Q4"
+  );
 
   const chart = Plot.plot({
     width: 900,
@@ -18,7 +23,11 @@ async function drawSimpleBarChart() {
     style: { background: "#fff" },
     x: {
       label: "Quarter",
-      tickRotate: -45
+      tickRotate: -45,
+      tickFormat: (d) => {
+        const [year, quarter] = d.split(" ");
+        return quarter === "Q1" ? `${year} ${quarter}` : quarter;
+      }
     },
     y: {
       label: "Fare Evasion (% of Ridership)",
@@ -27,10 +36,18 @@ async function drawSimpleBarChart() {
     },
     marks: [
       Plot.barY(raw, {
-        x: "label",  // ordinal label
-        y: "Fare Evasion_ridership",  // FIXED: match the exact column name from CSV
+        x: "label",
+        y: "Fare Evasion_ridership",
         fill: "#3182bd",
         title: d => `${d.label}: ${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`
+      }),
+      Plot.text(labeled, {
+        x: "label",
+        y: "Fare Evasion_ridership",
+        text: d => `${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`,
+        dy: -6,
+        fontWeight: "bold",
+        textAnchor: "middle"
       }),
       Plot.ruleY([0])
     ]
@@ -39,4 +56,5 @@ async function drawSimpleBarChart() {
   document.getElementById("fare-evasion-bar").appendChild(chart);
 }
 
-drawSimpleBarChart();
+drawBarChartWithLabels();
+
