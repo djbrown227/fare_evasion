@@ -1,0 +1,226 @@
+Date,Agency,Projection,Recovery,Month,Year
+2020-10-01,Bus,Best Case,0.45,October,2020
+2020-10-01,Bus,Midpoint,0.45,October,2020
+2020-10-01,Bus,Worst Case,0.45,October,2020
+2020-11-01,Bus,Best Case,0.45,November,2020
+2020-11-01,Bus,Midpoint,0.45,November,2020
+2020-11-01,Bus,Worst Case,0.45,November,2020
+2020-12-01,Bus,Best Case,0.45,December,2020
+2020-12-01,Bus,Midpoint,0.45,December,2020
+2020-12-01,Bus,Worst Case,0.45,December,2020
+2021-01-01,Bus,Best Case,0.51,January,2021
+2021-01-01,Bus,Midpoint,0.37,January,2021
+2021-01-01,Bus,Worst Case,0.23,January,2021
+2021-02-01,Bus,Best Case,0.51,February,2021
+2021-02-01,Bus,Midpoint,0.37,February,2021
+2021-02-01,Bus,Worst Case,0.23,February,2021
+2021-03-01,Bus,Best Case,0.51,March,2021
+2021-03-01,Bus,Midpoint,0.37,March,2021
+2021-03-01,Bus,Worst Case,0.23,March,2021
+2021-04-01,Bus,Best Case,0.56,April,2021
+2021-04-01,Bus,Midpoint,0.445,April,2021
+2021-04-01,Bus,Worst Case,0.33,April,2021
+2021-05-01,Bus,Best Case,0.56,May,2021
+2021-05-01,Bus,Midpoint,0.445,May,2021
+2021-05-01,Bus,Worst Case,0.33,May,2021
+2021-06-01,Bus,Best Case,0.56,June,2021
+2021-06-01,Bus,Midpoint,0.445,June,2021
+2021-06-01,Bus,Worst Case,0.33,June,2021
+2021-07-01,Bus,Best Case,0.77,July,2021
+2021-07-01,Bus,Midpoint,0.575,July,2021
+2021-07-01,Bus,Worst Case,0.38,July,2021
+2021-08-01,Bus,Best Case,0.77,August,2021
+2021-08-01,Bus,Midpoint,0.575,August,2021
+2021-08-01,Bus,Worst Case,0.38,August,2021
+2021-09-01,Bus,Best Case,0.77,September,2021
+2021-09-01,Bus,Midpoint,0.575,September,2021
+2021-09-01,Bus,Worst Case,0.38,September,2021
+2021-10-01,Bus,Best Case,0.84,October,2021
+2021-10-01,Bus,Midpoint,0.62,October,2021
+2021-10-01,Bus,Worst Case,0.4,October,2021
+2021-11-01,Bus,Best Case,0.84,November,2021
+2021-11-01,Bus,Midpoint,0.62,November,2021
+2021-11-01,Bus,Worst Case,0.4,November,2021
+2021-12-01,Bus,Best Case,0.84,December,2021
+2021-12-01,Bus,Midpoint,0.62,December,2021
+2021-12-01,Bus,Worst Case,0.4,December,2021
+2022-01-01,Bus,Best Case,0.87,January,2022
+2022-01-01,Bus,Midpoint,0.725,January,2022
+2022-01-01,Bus,Worst Case,0.58,January,2022
+2022-02-01,Bus,Best Case,0.87,February,2022
+2022-02-01,Bus,Midpoint,0.725,February,2022
+2022-02-01,Bus,Worst Case,0.58,February,2022
+2022-03-01,Bus,Best Case,0.87,March,2022
+2022-03-01,Bus,Midpoint,0.725,March,2022
+2022-03-01,Bus,Worst Case,0.58,March,2022
+2022-04-01,Bus,Best Case,0.87,April,2022
+2022-04-01,Bus,Midpoint,0.78,April,2022
+2022-04-01,Bus,Worst Case,0.69,April,2022
+2022-05-01,Bus,Best Case,0.87,May,2022
+2022-05-01,Bus,Midpoint,0.78,May,2022
+2022-05-01,Bus,Worst Case,0.69,May,2022
+2022-06-01,Bus,Best Case,0.87,June,2022
+2022-06-01,Bus,Midpoint,0.78,June,2022
+2022-06-01,Bus,Worst Case,0.69,June,2022
+2022-07-01,Bus,Best Case,0.88,July,2022
+2022-07-01,Bus,Midpoint,0.83,July,2022
+2022-07-01,Bus,Worst Case,0.78,July,2022
+2022-08-01,Bus,Best Case,0.88,August,2022
+2022-08-01,Bus,Midpoint,0.83,August,2022
+2022-08-01,Bus,Worst Case,0.78,August,2022
+2022-09-01,Bus,Best Case,0.88,September,2022
+2022-09-01,Bus,Midpoint,0.83,September,2022
+2022-09-01,Bus,Worst Case,0.78,September,2022
+2022-10-01,Bus,Best Case,0.9,October,2022
+2022-10-01,Bus,Midpoint,0.855,October,2022
+2022-10-01,Bus,Worst Case,0.81,October,2022
+2022-11-01,Bus,Best Case,0.9,November,2022
+2022-11-01,Bus,Midpoint,0.855,November,2022
+2022-11-01,Bus,Worst Case,0.81,November,2022
+2022-12-01,Bus,Best Case,0.9,December,2022
+2022-12-01,Bus,Midpoint,0.855,December,2022
+2022-12-01,Bus,Worst Case,0.81,December,2022
+2023-01-01,Bus,Best Case,0.9,January,2023
+2023-01-01,Bus,Midpoint,0.865,January,2023
+2023-01-01,Bus,Worst Case,0.83,January,2023
+2023-02-01,Bus,Best Case,0.9,February,2023
+2023-02-01,Bus,Midpoint,0.865,February,2023
+2023-02-01,Bus,Worst Case,0.83,February,2023
+2023-03-01,Bus,Best Case,0.9,March,2023
+2023-03-01,Bus,Midpoint,0.865,March,2023
+2023-03-01,Bus,Worst Case,0.83,March,2023
+2023-04-01,Bus,Best Case,0.9,April,2023
+2023-04-01,Bus,Midpoint,0.865,April,2023
+2023-04-01,Bus,Worst Case,0.83,April,2023
+2023-05-01,Bus,Best Case,0.9,May,2023
+2023-05-01,Bus,Midpoint,0.865,May,2023
+2023-05-01,Bus,Worst Case,0.83,May,2023
+2023-06-01,Bus,Best Case,0.9,June,2023
+2023-06-01,Bus,Midpoint,0.865,June,2023
+2023-06-01,Bus,Worst Case,0.83,June,2023
+2023-07-01,Bus,Best Case,0.9,July,2023
+2023-07-01,Bus,Midpoint,0.865,July,2023
+2023-07-01,Bus,Worst Case,0.83,July,2023
+2023-08-01,Bus,Best Case,0.9,August,2023
+2023-08-01,Bus,Midpoint,0.865,August,2023
+2023-08-01,Bus,Worst Case,0.83,August,2023
+2023-09-01,Bus,Best Case,0.9,September,2023
+2023-09-01,Bus,Midpoint,0.865,September,2023
+2023-09-01,Bus,Worst Case,0.83,September,2023
+2023-10-01,Bus,Best Case,0.9,October,2023
+2023-10-01,Bus,Midpoint,0.865,October,2023
+2023-10-01,Bus,Worst Case,0.83,October,2023
+2023-11-01,Bus,Best Case,0.9,November,2023
+2023-11-01,Bus,Midpoint,0.865,November,2023
+2023-11-01,Bus,Worst Case,0.83,November,2023
+2023-12-01,Bus,Best Case,0.9,December,2023
+2023-12-01,Bus,Midpoint,0.865,December,2023
+2023-12-01,Bus,Worst Case,0.83,December,2023
+2024-01-01,Bus,Best Case,0.91,January,2024
+2024-01-01,Bus,Midpoint,0.875,January,2024
+2024-01-01,Bus,Worst Case,0.84,January,2024
+2024-02-01,Bus,Best Case,0.91,February,2024
+2024-02-01,Bus,Midpoint,0.875,February,2024
+2024-02-01,Bus,Worst Case,0.84,February,2024
+2024-03-01,Bus,Best Case,0.91,March,2024
+2024-03-01,Bus,Midpoint,0.875,March,2024
+2024-03-01,Bus,Worst Case,0.84,March,2024
+2024-04-01,Bus,Best Case,0.91,April,2024
+2024-04-01,Bus,Midpoint,0.875,April,2024
+2024-04-01,Bus,Worst Case,0.84,April,2024
+2024-05-01,Bus,Best Case,0.91,May,2024
+2024-05-01,Bus,Midpoint,0.875,May,2024
+2024-05-01,Bus,Worst Case,0.84,May,2024
+2024-06-01,Bus,Best Case,0.91,June,2024
+2024-06-01,Bus,Midpoint,0.875,June,2024
+2024-06-01,Bus,Worst Case,0.84,June,2024
+2024-07-01,Bus,Best Case,0.91,July,2024
+2024-07-01,Bus,Midpoint,0.875,July,2024
+2024-07-01,Bus,Worst Case,0.84,July,2024
+2024-08-01,Bus,Best Case,0.91,August,2024
+2024-08-01,Bus,Midpoint,0.875,August,2024
+2024-08-01,Bus,Worst Case,0.84,August,2024
+2024-09-01,Bus,Best Case,0.91,September,2024
+2024-09-01,Bus,Midpoint,0.875,September,2024
+2024-09-01,Bus,Worst Case,0.84,September,2024
+2024-10-01,Bus,Best Case,0.91,October,2024
+2024-10-01,Bus,Midpoint,0.875,October,2024
+2024-10-01,Bus,Worst Case,0.84,October,2024
+2024-11-01,Bus,Best Case,0.91,November,2024
+2024-11-01,Bus,Midpoint,0.875,November,2024
+2024-11-01,Bus,Worst Case,0.84,November,2024
+2024-12-01,Bus,Best Case,0.91,December,2024
+2024-12-01,Bus,Midpoint,0.875,December,2024
+2024-12-01,Bus,Worst Case,0.84,December,2024
+2025-01-01,Bus,Best Case,0.828,January,2025
+2025-01-01,Bus,Midpoint,0.7593,January,2025
+2025-01-01,Bus,Worst Case,0.691,January,2025
+2025-02-01,Bus,Best Case,0.836,February,2025
+2025-02-01,Bus,Midpoint,0.7672,February,2025
+2025-02-01,Bus,Worst Case,0.698,February,2025
+2025-03-01,Bus,Best Case,0.845,March,2025
+2025-03-01,Bus,Midpoint,0.775,March,2025
+2025-03-01,Bus,Worst Case,0.705,March,2025
+2025-04-01,Bus,Best Case,0.857,April,2025
+2025-04-01,Bus,Midpoint,0.7861,April,2025
+2025-04-01,Bus,Worst Case,0.715,April,2025
+2025-05-01,Bus,Best Case,0.863,May,2025
+2025-05-01,Bus,Midpoint,0.7907,May,2025
+2025-05-01,Bus,Worst Case,0.719,May,2025
+2025-06-01,Bus,Best Case,0.868,June,2025
+2025-06-01,Bus,Midpoint,0.7953,June,2025
+2025-06-01,Bus,Worst Case,0.723,June,2025
+2025-07-01,Bus,Best Case,0.877,July,2025
+2025-07-01,Bus,Midpoint,0.8035,July,2025
+2025-07-01,Bus,Worst Case,0.73,July,2025
+2025-08-01,Bus,Best Case,0.878,August,2025
+2025-08-01,Bus,Midpoint,0.8045,August,2025
+2025-08-01,Bus,Worst Case,0.731,August,2025
+2025-09-01,Bus,Best Case,0.88,September,2025
+2025-09-01,Bus,Midpoint,0.8055,September,2025
+2025-09-01,Bus,Worst Case,0.731,September,2025
+2025-10-01,Bus,Best Case,0.887,October,2025
+2025-10-01,Bus,Midpoint,0.812,October,2025
+2025-10-01,Bus,Worst Case,0.737,October,2025
+2025-11-01,Bus,Best Case,0.882,November,2025
+2025-11-01,Bus,Midpoint,0.8074,November,2025
+2025-11-01,Bus,Worst Case,0.733,November,2025
+2025-12-01,Bus,Best Case,0.878,December,2025
+2025-12-01,Bus,Midpoint,0.8029,December,2025
+2025-12-01,Bus,Worst Case,0.728,December,2025
+2026-01-01,Bus,Best Case,0.859,January,2026
+2026-01-01,Bus,Midpoint,0.7858,January,2026
+2026-01-01,Bus,Worst Case,0.712,January,2026
+2026-02-01,Bus,Best Case,0.868,February,2026
+2026-02-01,Bus,Midpoint,0.7937,February,2026
+2026-02-01,Bus,Worst Case,0.719,February,2026
+2026-03-01,Bus,Best Case,0.877,March,2026
+2026-03-01,Bus,Midpoint,0.8017,March,2026
+2026-03-01,Bus,Worst Case,0.726,March,2026
+2026-04-01,Bus,Best Case,0.89,April,2026
+2026-04-01,Bus,Midpoint,0.813,April,2026
+2026-04-01,Bus,Worst Case,0.736,April,2026
+2026-05-01,Bus,Best Case,0.895,May,2026
+2026-05-01,Bus,Midpoint,0.8177,May,2026
+2026-05-01,Bus,Worst Case,0.74,May,2026
+2026-06-01,Bus,Best Case,0.9,June,2026
+2026-06-01,Bus,Midpoint,0.8223,June,2026
+2026-06-01,Bus,Worst Case,0.744,June,2026
+2026-07-01,Bus,Best Case,0.91,July,2026
+2026-07-01,Bus,Midpoint,0.8307,July,2026
+2026-07-01,Bus,Worst Case,0.752,July,2026
+2026-08-01,Bus,Best Case,0.911,August,2026
+2026-08-01,Bus,Midpoint,0.8316,August,2026
+2026-08-01,Bus,Worst Case,0.752,August,2026
+2026-09-01,Bus,Best Case,0.912,September,2026
+2026-09-01,Bus,Midpoint,0.8326,September,2026
+2026-09-01,Bus,Worst Case,0.753,September,2026
+2026-10-01,Bus,Best Case,0.914,October,2026
+2026-10-01,Bus,Midpoint,0.8335,October,2026
+2026-10-01,Bus,Worst Case,0.754,October,2026
+2026-11-01,Bus,Best Case,0.915,November,2026
+2026-11-01,Bus,Midpoint,0.8345,November,2026
+2026-11-01,Bus,Worst Case,0.754,November,2026
+2026-12-01,Bus,Best Case,0.916,December,2026
+2026-12-01,Bus,Midpoint,0.8355,December,2026
+2026-12-01,Bus,Worst Case,0.755,December,2026
