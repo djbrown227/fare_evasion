@@ -14,6 +14,10 @@ async function drawFareVsPassengersPlot() {
     d.date = new Date(d.Year, month, 1); // First day of quarter
   });
 
+  // Define event line date (e.g., "Lockdown Ends")
+  const eventDate = new Date(2021, 6, 1); // July 1, 2021 (Q3)
+  const eventLabel = "Lockdown Ends";
+
   document.body.style.fontFamily = "Inter, system-ui, sans-serif";
 
   const plot = Plot.plot({
@@ -21,6 +25,7 @@ async function drawFareVsPassengersPlot() {
     height: 500,
     marginLeft: 100,
     marginBottom: 80,
+    marginTop: 80,
     style: { background: "#fff" },
     marks: [
       Plot.line(filtered, {
@@ -39,13 +44,40 @@ async function drawFareVsPassengersPlot() {
         curve: "catmull-rom",
         title: d => `Paying: ${(d["Paying Passengers"] / 1e6).toFixed(1)}M`
       }),
+      // Add vertical rule for event
+      Plot.ruleX([eventDate], {
+        stroke: "black",
+        strokeDasharray: "4 2",
+        strokeWidth: 1.5,
+        opacity: 0.8,
+        title: eventLabel
+      }),
+      Plot.text(
+        [
+          {
+            date: eventDate,
+            y: d3.max(filtered, d => Math.max(d.NoPay_Passengers, d["Paying Passengers"])) * 1.05,
+            label: eventLabel
+          }
+        ],
+        {
+          x: "date",
+          y: "y",
+          text: "label",
+          textAnchor: "middle",
+          dy: -5,
+          fill: "black",
+          style: { fontSize: "13px" }  // ✅ fix: fontSize moved into style
+        }
+      )
+      ,
       Plot.ruleY([0])
     ],
     x: {
       label: "Quarter",
       type: "time",
       tickFormat: d3.timeFormat("%Y Q%q"),
-      ticks: Plot.timeInterval("6 months"), // 1 tick per year
+      ticks: Plot.timeInterval("6 months"), // tick every 2 quarters
       tickRotate: -45
     },
     y: {
@@ -58,10 +90,10 @@ async function drawFareVsPassengersPlot() {
       gridStrokeWidth: 0.5
     },
     color: {
-        domain: ["Non-Paying", "Paying"],
-        range: ["#1E79A7", "#FF0000"],
-        legend: true
-      }
+      domain: ["Non-Paying", "Paying"],
+      range: ["#4E79A7", "#F28E2B"],
+      legend: true
+    }
   });
 
   document.getElementById("fare-passenger-plot").appendChild(plot);
