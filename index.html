@@ -564,10 +564,10 @@
                 <div class="chart-content">
                     <div class="chart-placeholder">
                         <!-- Replace with your Observable Plot visualization -->
-                        <div id="quarterly-plot" class="plot-container"></div>
+                        <div id="fare-bar" class="plot-container"></div>
 
                         <!-- Load your visualization script -->
-                        <script type="module" src="./assets/js/quarterlyAvgPlot.js"></script> </div>
+                        <script type="module" src="./assets/js/effective_df.js"></script> </div>
                     </div>
                 <div class="chart-credits">
                     <span>Source: Global Enterprise Research Initiative</span>
@@ -732,10 +732,10 @@
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <div id="bus-evasion-plot" class="plot-container"></div>
+                        <div id="waffle-chart" class="plot-container"></div>
 
                         <!-- Load your visualization script -->
-                        <script type="module" src="./assets/js/plotBusEvasion.js"></script> </div>
+                        <script type="module" src="./assets/js/waffle.js"></script> </div>
                     </div>
                 <div class="chart-credits">
                     <span>Source: Global Enterprise Research Initiative</span>
@@ -750,10 +750,10 @@
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <div id="bus-evasion-plot" class="plot-container"></div>
+                        <div id="revenue-line" class="plot-container"></div>
 
                         <!-- Load your visualization script -->
-                        <script type="module" src="./assets/js/plotBusEvasion.js"></script> </div>
+                        <script type="module" src="./assets/js/revenue_df.js"></script> </div>
                     </div>
                 <div class="chart-credits">
                     <span>Source: Global Enterprise Research Initiative</span>
@@ -761,7 +761,35 @@
                 </div>
             </div>            
         </div>
-
+<!-- Primary Visualization -->
+<div class="chart-feature">
+    <div class="chart-header">
+      <h3 class="chart-title">Fare Payment & Transfers</h3>
+      <p class="chart-description">
+        A Sankey diagram showing the breakdown of fare-paying and non-paying passengers,
+        and those who transfer to the subway.
+      </p>
+    </div>
+  
+    <div class="chart-content">
+      <div class="chart-placeholder">
+        <!-- 🔁 Sankey will be rendered here -->
+        <div id="fare-sankey" class="plot-container"></div>
+  
+        <!-- ✅ Import and run Sankey script -->
+        <script type="module">
+          import { drawSankey } from './assets/js/sankey_fare.js';
+          drawSankey('fare-sankey');
+        </script>
+      </div>
+    </div>
+  
+    <div class="chart-credits">
+      <span>Source: MTA Passenger Flow Data</span>
+      <span>Updated: August 2025</span>
+    </div>
+  </div>
+  
         <!-- Footer -->
         <footer class="content-footer">
             <h4 class="footer-title">Research Methodology</h4>
