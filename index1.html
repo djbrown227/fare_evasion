@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a2332;
+            --accent-gold: #d4af37;
+            --warm-gray: #f7f5f3;
+            --cool-gray: #e8e6e3;
+            --text-charcoal: #2c2c2c;
+            --text-medium: #6b6b6b;
+            --text-light: #a3a3a3;
+            --pure-white: #ffffff;
+            --sage-green: #9caf88;
+            --terracotta: #c17767;
+            --soft-blue: #7ba7bc;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-charcoal);
+            background: var(--pure-white);
+            font-size: 16px;
+            font-weight: 400;
+            padding: 3rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .section-intro {
+            font-size: 1.125rem;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            line-height: 1.7;
+            max-width: 65ch;
+        }
+
+        /* Two Column Layout */
+        .row {
+            margin: 4rem 0;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 0 3rem 0 0;
+        }
+
+        .column:last-child {
+            padding: 0 0 0 3rem;
+        }
+
+        /* Editorial text styles */
+        .editorial-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-charcoal);
+        }
+
+        .editorial-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .editorial-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .editorial-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .editorial-text h3:first-child {
+            margin-top: 0;
+        }
+
+        /* Chart feature styles */
+        .chart-feature {
+            background: var(--warm-gray);
+            border-radius: 0;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .chart-feature:hover {
+            transform: translateY(-2px);
+        }
+
+        .chart-header {
+            padding: 2rem 2rem 1.5rem;
+            background: var(--pure-white);
+            border-bottom: 1px solid var(--cool-gray);
+        }
+
+        .chart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-charcoal);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .chart-description {
+            color: var(--text-medium);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .chart-content {
+            padding: 3rem 2rem;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--pure-white);
+        }
+
+        .chart-placeholder {
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .chart-credits {
+            padding: 1rem 2rem;
+            background: var(--warm-gray);
+            border-top: 1px solid var(--cool-gray);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .column {
+                float: none;
+                width: 100%;
+                padding: 0;
+                margin-bottom: 3rem;
+            }
+
+            .column:last-child {
+                padding: 0;
+                margin-bottom: 0;
+            }
+
+            body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Type 1: Text + Text Two Column -->
+        <section>
+            <h2 class="section-title">Text + Text Layout</h2>
+            <p class="section-intro">Two columns of editorial content side by side.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>The Data Revolution</h3>
+                        <p>The digital transformation of modern enterprises has fundamentally altered how organizations approach data management and analysis. Traditional hierarchical structures are giving way to more fluid, network-based models that prioritize agility and responsiveness.</p>
+                        
+                        <p>This shift represents more than just technological advancement—it embodies a philosophical change in how we conceptualize organizational knowledge and decision-making processes.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>Real-Time Analytics</h3>
+                        <p>The emergence of real-time analytics platforms has created unprecedented opportunities for immediate course correction and adaptive strategy implementation. Organizations can now respond to market shifts within hours rather than quarters.</p>
+                        
+                        <p>However, this capability comes with its own set of challenges. The pressure to act on immediate data can sometimes overshadow the importance of long-term strategic thinking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Type 2: Visualization + Visualization -->
+        <section>
+            <h2 class="section-title">Dual Visualization Layout</h2>
+            <p class="section-intro">Two charts side by side for comparison.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Revenue Growth</h3>
+                            <p class="chart-description">Quarterly performance trends across business segments.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-placeholder">Line Chart: Revenue by Quarter</div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: Financial Data</span>
+                            <span>Q4 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Market Share</h3>
+                            <p class="chart-description">Competitive positioning across key regions.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-placeholder">Pie Chart: Market Distribution</div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: Market Research</span>
+                            <span>Updated Monthly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Type 3: Text + Visualization -->
+        <section>
+            <h2 class="section-title">Text + Visualization Layout</h2>
+            <p class="section-intro">Editorial content with supporting data visualization.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>Performance Insights</h3>
+                        <p>The correlation between employee engagement scores and productivity metrics has become increasingly evident across our dataset. Organizations with higher engagement consistently demonstrate superior performance.</p>
+                        
+                        <p>This relationship manifests most clearly in customer satisfaction ratings, where engaged teams deliver experiences that drive measurable business outcomes.</p>
+                        
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Engagement vs Performance</h3>
+                            <p class="chart-description">Correlation analysis of key metrics across departments.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-placeholder">Scatter Plot: Engagement vs KPIs</div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: HR Analytics</span>
+                            <span>N=2,847 employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
