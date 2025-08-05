@@ -6,591 +6,7 @@
     <title>Insight — Data & Strategy</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<style>
-    :root {
-        --primary-navy: #1a2332;
-        --accent-gold: #d4af37;
-        --warm-gray: #f7f5f3;
-        --cool-gray: #e8e6e3;
-        --text-charcoal: #2c2c2c;
-        --text-medium: #6b6b6b;
-        --text-light: #a3a3a3;
-        --pure-white: #ffffff;
-        --sage-green: #9caf88;
-        --terracotta: #c17767;
-        --soft-blue: #7ba7bc;
-    }
-
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.7;
-        color: var(--text-charcoal);
-        background: var(--pure-white);
-        font-size: 16px;
-        font-weight: 400;
-        margin: 0;
-        padding: 2rem;
-    }
-
-    .container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    /* ========== 2-COLUMN LAYOUTS ========== */
-    
-    /* Classic 2-Column Split */
-    .two-column-classic {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin: 4rem 0;
-        padding: 3rem 0;
-        border-top: 1px solid var(--cool-gray);
-        border-bottom: 1px solid var(--cool-gray);
-    }
-
-    /* Editorial + Sidebar */
-    .two-column-editorial {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 5rem;
-        margin: 4rem 0;
-    }
-
-    .editorial-main {
-        padding-right: 2rem;
-    }
-
-    .editorial-sidebar {
-        background: var(--warm-gray);
-        padding: 3rem 2.5rem;
-        border-left: 4px solid var(--accent-gold);
-        position: relative;
-    }
-
-    .editorial-sidebar::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100px;
-        height: 100px;
-        background: rgba(212, 175, 55, 0.1);
-        border-radius: 50%;
-        transform: translate(30%, -30%);
-    }
-
-    /* Image + Text Layout */
-    .two-column-feature {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 4rem;
-        margin: 6rem 0;
-        align-items: center;
-    }
-
-    .feature-image {
-        background: linear-gradient(135deg, var(--sage-green), var(--soft-blue));
-        height: 400px;
-        border-radius: 0;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.125rem;
-        font-style: italic;
-    }
-
-    .feature-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 150px;
-        height: 150px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        transform: translate(40%, -40%);
-    }
-
-    .feature-content {
-        padding-left: 2rem;
-    }
-
-    /* ========== 3-COLUMN LAYOUTS ========== */
-
-    /* Equal 3-Column Grid */
-    .three-column-equal {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        margin: 5rem 0;
-    }
-
-    .column-card {
-        background: var(--pure-white);
-        border: 1px solid var(--cool-gray);
-        padding: 2.5rem 2rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .column-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, var(--accent-gold), var(--sage-green));
-    }
-
-    .column-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Feature + Two Supporting Columns */
-    .three-column-feature {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 4rem;
-        margin: 5rem 0;
-    }
-
-    .feature-column {
-        background: var(--warm-gray);
-        padding: 3rem;
-        position: relative;
-    }
-
-    .feature-column::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 120px;
-        height: 120px;
-        background: rgba(212, 175, 55, 0.1);
-        border-radius: 50%;
-        transform: translate(40%, 40%);
-    }
-
-    .supporting-column {
-        padding: 2rem 0;
-    }
-
-    /* Timeline/Process 3-Column */
-    .three-column-timeline {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin: 5rem 0;
-        position: relative;
-    }
-
-    .three-column-timeline::before {
-        content: '';
-        position: absolute;
-        top: 4rem;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, var(--accent-gold), var(--sage-green), var(--soft-blue));
-        z-index: 1;
-    }
-
-    .timeline-step {
-        text-align: center;
-        padding: 2rem 1.5rem;
-        background: var(--pure-white);
-        position: relative;
-        z-index: 2;
-    }
-
-    .step-number {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: var(--accent-gold);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0 auto 1.5rem;
-        position: relative;
-        z-index: 3;
-    }
-
-    .step-number.sage { background: var(--sage-green); }
-    .step-number.blue { background: var(--soft-blue); }
-
-    /* ========== TYPOGRAPHY ========== */
-
-    .column-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        font-weight: 500;
-        color: var(--text-charcoal);
-        margin-bottom: 1rem;
-        line-height: 1.3;
-    }
-
-    .column-subtitle {
-        font-size: 1.125rem;
-        color: var(--accent-gold);
-        font-weight: 500;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        font-size: 0.875rem;
-    }
-
-    .column-text {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--text-charcoal);
-        margin-bottom: 1.5rem;
-    }
-
-    .column-text:last-child {
-        margin-bottom: 0;
-    }
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .section-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        font-weight: 500;
-        color: var(--text-charcoal);
-        margin-bottom: 1rem;
-        line-height: 1.2;
-    }
-
-    .section-description {
-        font-size: 1.125rem;
-        color: var(--text-medium);
-        font-weight: 300;
-        max-width: 60ch;
-        margin: 0 auto;
-    }
-
-    /* ========== RESPONSIVE DESIGN ========== */
-
-    @media (max-width: 1024px) {
-        .two-column-classic,
-        .two-column-editorial,
-        .two-column-feature {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .three-column-equal,
-        .three-column-feature,
-        .three-column-timeline {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .editorial-main {
-            padding-right: 0;
-        }
-
-        .feature-content {
-            padding-left: 0;
-        }
-
-        .three-column-timeline::before {
-            display: none;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            padding: 1rem;
-        }
-
-        .editorial-sidebar,
-        .feature-column {
-            padding: 2rem 1.5rem;
-        }
-
-        .column-card {
-            padding: 2rem 1.5rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-        }
-    }
-
-    /* ========== DEMO STYLING ========== */
-    .demo-section {
-        margin: 6rem 0;
-        padding: 4rem 0;
-        border-bottom: 2px solid var(--cool-gray);
-    }
-
-    .demo-label {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
-        color: var(--text-light);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-/* Two Column Editorial Section */
-/* Two Column Section — Aligned with Editorial Style */
-.two-column-section {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 6rem;
-margin: 6rem 0;
-padding: 0;
-}
-
-.two-column {
-display: flex;
-flex-direction: column;
-justify-content: center;
-font-size: 1rem;
-line-height: 1.8;
-color: var(--text-charcoal);
-}
-
-.two-column h3 {
-font-family: 'Playfair Display', serif;
-font-size: 1.75rem;
-font-weight: 500;
-color: var(--text-charcoal);
-margin-bottom: 1.5rem;
-line-height: 1.3;
-}
-
-.two-column p {
-font-weight: 300;
-color: var(--text-medium);
-margin-bottom: 1.5rem;
-max-width: 65ch;
-}
-
-.two-column p:last-child {
-margin-bottom: 0;
-}
-
-/* Chart/Visual Placeholder */
-.visual-box {
-background: var(--warm-gray);
-min-height: 250px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-style: italic;
-font-weight: 300;
-font-size: 1rem;
-color: var(--text-light);
-border: 1px dashed var(--cool-gray);
-border-radius: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-navy: #1a2332;
-    --accent-gold: #d4af37;
-    --warm-gray: #f7f5f3;
-    --cool-gray: #e8e6e3;
-    --text-charcoal: #2c2c2c;
-    --text-medium: #6b6b6b;
-    --text-light: #a3a3a3;
-    --pure-white: #ffffff;
-    --sage-green: #9caf88;
-    --terracotta: #c17767;
-    --soft-blue: #7ba7bc;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.7;
-    color: var(--text-charcoal);
-    background: var(--pure-white);
-    font-size: 16px;
-    font-weight: 400;
-    padding: 3rem;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: var(--text-charcoal);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-}
-
-.section-intro {
-    font-size: 1.125rem;
-    color: var(--text-medium);
-    margin-bottom: 3rem;
-    font-weight: 300;
-    line-height: 1.7;
-    max-width: 65ch;
-}
-
-/* Two Column Layout */
-.row {
-    margin: 4rem 0;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 0 3rem 0 0;
-}
-
-.column:last-child {
-    padding: 0 0 0 3rem;
-}
-
-/* Editorial text styles */
-.editorial-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-charcoal);
-}
-
-.editorial-text p {
-    margin-bottom: 1.5rem;
-}
-
-.editorial-text p:last-child {
-    margin-bottom: 0;
-}
-
-.editorial-text h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-charcoal);
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-.editorial-text h3:first-child {
-    margin-top: 0;
-}
-
-/* Chart feature styles */
-.chart-feature {
-    background: var(--warm-gray);
-    border-radius: 0;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.chart-feature:hover {
-    transform: translateY(-2px);
-}
-
-.chart-header {
-    padding: 2rem 2rem 1.5rem;
-    background: var(--pure-white);
-    border-bottom: 1px solid var(--cool-gray);
-}
-
-.chart-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--text-charcoal);
-    margin-bottom: 0.75rem;
-    line-height: 1.3;
-}
-
-.chart-description {
-    color: var(--text-medium);
-    font-size: 0.875rem;
-    line-height: 1.6;
-}
-
-.chart-content {
-    padding: 3rem 2rem;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--pure-white);
-}
-
-.chart-placeholder {
-    color: var(--text-light);
-    font-size: 1rem;
-    text-align: center;
-    font-style: italic;
-    font-weight: 300;
-}
-
-.chart-credits {
-    padding: 1rem 2rem;
-    background: var(--warm-gray);
-    border-top: 1px solid var(--cool-gray);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .column {
-        float: none;
-        width: 100%;
-        padding: 0;
-        margin-bottom: 3rem;
-    }
-
-    .column:last-child {
-        padding: 0;
-        margin-bottom: 0;
-    }
-
-    body {
-        padding: 1.5rem;
-    }
-}
-
-
-    </style>    
+</head> 
 <body>
     <!-- Fixed Header -->
     <header class="magazine-header">
@@ -639,12 +55,6 @@ body {
                 <h2 class="section-title">What’s Happening Now</h2>
                 <p class="section-intro">Fare evasion on NYC buses has surged to record levels, with nearly half of all riders now boarding without paying. This shift has created a two-tier system, where paying passengers are often the minority. The increase—from around 20% pre-pandemic to over 44% today—reflects economic strain, limited enforcement, and outdated fare systems, especially on local routes.
                     Despite efforts like EAGLE Teams and awareness campaigns, evasion remains high. These patterns suggest enforcement alone won’t solve the problem.</p>
-                
-                <div class="editorial-text">
-                    <p>In 2024, total bus ridership reached <strong>408.9 million</strong> trips, a notable recovery from pandemic lows. However, only <strong>about 53% of pre-COVID levels</strong> were regained on average throughout the year.</p>
-                    <p>Fare evasion remains widespread. The latest data from Q4 2024 to Q1 2025 shows that <strong>more than 46% of riders</strong> on NYC buses are not paying their fares.</p>
-                    <p>This has a major fiscal impact. Even with some recovery, the system collected significantly less revenue than expected under normal compliance. The current effective fare paid per rider has dropped sharply compared to pre-2020 norms.</p>
-                </div>
             </section>
 
             <!-- Primary Visualization -->
@@ -666,38 +76,93 @@ body {
                     <span>Updated Quarterly • Next: October 2025</span>
                 </div>
             </div>
-
+                    <!-- Type 2: Visualization + Visualization -->
+        <section>
+            <h2 class="section-title">Dual Visualization Layout</h2>
+            <p class="section-intro">Two charts side by side for comparison.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Revenue Growth</h3>
+                            <p class="chart-description">Quarterly performance trends across business segments.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div id="bus-evasion-plot" class="plot-container"></div>
+    
+                            <!-- Load your visualization script -->
+                            <script type="module" src="./assets/js/plotBusEvasion.js"></script> </div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: Financial Data</span>
+                            <span>Q4 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Market Share</h3>
+                            <p class="chart-description">Competitive positioning across key regions.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div id="subway-evasion-plot" class="plot-container"></div>
+    
+                            <!-- Load your visualization script -->
+                            <script type="module" src="./assets/js/plotSubwayEvasion.js"></script> </div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: Market Research</span>
+                            <span>Updated Monthly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    <!-- Type 3: Text + Visualization -->
+        <section>
+            <h2 class="section-title">Text + Visualization Layout</h2>
+            <p class="section-intro">Editorial content with supporting data visualization.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>Performance Insights</h3>
+                        <p>The correlation between employee engagement scores and productivity metrics has become increasingly evident across our dataset. Organizations with higher engagement consistently demonstrate superior performance.</p>
+                        
+                        <p>This relationship manifests most clearly in customer satisfaction ratings, where engaged teams deliver experiences that drive measurable business outcomes.</p>
+                        
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Engagement vs Performance</h3>
+                            <p class="chart-description">Correlation analysis of key metrics across departments.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div id="subway-evasion-plot" class="plot-container"></div>
+    
+                            <!-- Load your visualization script -->
+                            <script type="module" src="./assets/js/plotSubwayEvasion.js"></script> </div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: HR Analytics</span>
+                            <span>N=2,847 employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <!-- Insight Box -->
             <div class="insight-box">
                 <h3 class="insight-title">The Intelligence Imperative</h3>
                 <p class="insight-content">Organizations that have successfully implemented intelligent data architectures report 340% improvements in decision-making speed and 156% increases in strategic accuracy, fundamentally altering their competitive positioning within their respective markets.</p>
-            </div>
-
-            <!-- Two Column Section -->
-            <div class="dual-column">
-                <div>
-                    <h3 class="section-title">Regional Perspectives</h3>
-                    <div class="editorial-text">
-                        <p>European organizations have pioneered privacy-first architectural approaches, developing frameworks that balance regulatory compliance with operational efficiency. This model is increasingly influencing global standards and best practices.</p>
-                        <p>Asian markets demonstrate remarkable innovation in real-time processing capabilities, with several organizations achieving sub-millisecond response times across continental networks. These advances are reshaping expectations for global data infrastructure.</p>
-                    </div>
-                </div>
-                
-                <div class="chart-feature">
-                    <div class="chart-header">
-                        <h4 class="chart-title">Performance Metrics</h4>
-                        <p class="chart-description">Comparative analysis of implementation success rates across geographic regions and industry verticals.</p>
-                    </div>
-                    <div class="chart-content" style="min-height: 350px;">
-                        <div class="chart-placeholder">
-                            <p>European organizations have pioneered privacy-first architectural approaches, developing frameworks that balance regulatory compliance with operational efficiency. This model is increasingly influencing global standards and best practices.</p>
-                        </div>
-                    </div>
-                    <div class="chart-credits">
-                        <span>Research Division</span>
-                        <span>Live Data</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Data Showcase -->
@@ -933,40 +398,6 @@ body {
                         <div class="chart-credits">
                             <span>Source: Market Research</span>
                             <span>Updated Monthly</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Type 3: Text + Visualization -->
-        <section>
-            <h2 class="section-title">Text + Visualization Layout</h2>
-            <p class="section-intro">Editorial content with supporting data visualization.</p>
-            
-            <div class="row">
-                <div class="column">
-                    <div class="editorial-text">
-                        <h3>Performance Insights</h3>
-                        <p>The correlation between employee engagement scores and productivity metrics has become increasingly evident across our dataset. Organizations with higher engagement consistently demonstrate superior performance.</p>
-                        
-                        <p>This relationship manifests most clearly in customer satisfaction ratings, where engaged teams deliver experiences that drive measurable business outcomes.</p>
-                        
-                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="chart-feature">
-                        <div class="chart-header">
-                            <h3 class="chart-title">Engagement vs Performance</h3>
-                            <p class="chart-description">Correlation analysis of key metrics across departments.</p>
-                        </div>
-                        <div class="chart-content">
-                            <div class="chart-placeholder">Scatter Plot: Engagement vs KPIs</div>
-                        </div>
-                        <div class="chart-credits">
-                            <span>Source: HR Analytics</span>
-                            <span>N=2,847 employees</span>
                         </div>
                     </div>
                 </div>
