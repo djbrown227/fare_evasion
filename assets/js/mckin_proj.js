@@ -63,10 +63,10 @@ async function drawBusProjectionPlot() {
 
   const plot = Plot.plot({
     width: 1000,
-    height: 500,
-    marginLeft: 100,
-    marginRight:100,
-    marginBottom: 100,
+    height: 600,
+    marginLeft: 50,
+    marginRight:50,
+    marginBottom: 50,
     marks: [
       // Fill between best and worst
       Plot.areaY(areaData, {

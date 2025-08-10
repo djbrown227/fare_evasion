@@ -10,7 +10,7 @@ async function drawBusEvasion() {
 
   const plot = Plot.plot({
     title: "For charts, an informative title",
-    width: 800,
+    width: 600,
     height: 450,
     marginLeft: 0,
     marginBottom: 0,

@@ -5,7 +5,7 @@ async function drawSubwayEvasion() {
   const data = await d3.csv("data/processed/subway_evasion_df.csv", d3.autoType);
 
   const chart = Plot.plot({
-    width: 1000,
+    width: width,
     height: 600,
     marginLeft: 100,
     marginBottom: 100,
