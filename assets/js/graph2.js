@@ -4,12 +4,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 async function drawLineChartWithLabels() {
   const raw = await d3.csv("data/processed/graph_2.csv", d3.autoType);
 
-  // Create a combined Year + Quarter label
-  raw.forEach(d => {
-    d.label = `${d.Year} ${d.Quarter}`;
-  });
-
-  // Create a time index for sorting (optional but ensures line continuity)
+  // Create a time index (first month of each quarter)
   const quarterToMonth = { Q1: 1, Q2: 4, Q3: 7, Q4: 10 };
   raw.forEach(d => {
     d.date = new Date(d.Year, quarterToMonth[d.Quarter] - 1);
@@ -18,29 +13,28 @@ async function drawLineChartWithLabels() {
   // Sort data chronologically
   raw.sort((a, b) => d3.ascending(a.date, b.date));
 
-  // Labeled points for annotations
-  const labeled = raw.filter(d =>
-    d.label === "2024 Q2" || d.label === "2021 Q4" || d.label === "2022 Q4"
-  );
+  // Pick first, last, and highest point
+  const first = raw[0];
+  const last = raw[raw.length - 1];
+  const max = d3.max(raw, d => d["Fare Evasion_ridership"]);
+  const highest = raw.find(d => d["Fare Evasion_ridership"] === max);
+
+  const labeled = [first, last, highest];
 
   const chart = Plot.plot({
     width: 900,
     height: 500,
     marginLeft: 100,
-    marginBottom: 80,
-    marginTop: 80,
+    marginRight: 100,
+    marginBottom: 100,
+    marginTop: 100,
     style: { background: "#fff" },
     x: {
-      label: "Quarter",
+      label: "Year / Quarter",
       tickRotate: -45,
-      tickFormat: (d, i, ticks) => {
-        const label = raw[d];
-        if (!label) return "";
-        const [year, quarter] = label.label.split(" ");
-        return quarter === "Q1" ? `${year} ${quarter}` : quarter;
-      },
-      tickValues: d3.range(raw.length),
-      tickSize: 0
+      tickFormat: d3.timeFormat("%Y Q%q"),  // show "2021 Q1", "Q2", etc.
+      ticks: Plot.timeInterval("6 months"), // tick every 2 quarters
+      grid: false
     },
     y: {
       label: "Fare Evasion (% of Ridership)",
@@ -49,26 +43,27 @@ async function drawLineChartWithLabels() {
     },
     marks: [
       Plot.line(raw, {
-        x: (d, i) => i,
+        x: "date",
         y: "Fare Evasion_ridership",
         stroke: "#3182bd",
         strokeWidth: 2,
         curve: "monotone-x"
       }),
       Plot.dot(labeled, {
-        x: d => raw.findIndex(r => r.label === d.label),
+        x: "date",
         y: "Fare Evasion_ridership",
         fill: "#3182bd",
-        r: 4,
-        title: d => `${d.label}: ${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`
+        r: 5,
+        title: d => `${d.Year} ${d.Quarter}: ${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`
       }),
       Plot.text(labeled, {
-        x: d => raw.findIndex(r => r.label === d.label),
+        x: "date",
         y: "Fare Evasion_ridership",
         text: d => `${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`,
-        dy: -6,
+        dy: 15,
+        dx: -2,
         fontWeight: "bold",
-        textAnchor: "middle"
+        textAnchor: "start"
       }),
       Plot.ruleY([0])
     ]
