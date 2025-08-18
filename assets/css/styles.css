@@ -825,19 +825,32 @@ border-radius: 0;
 }
 
 :root {
-    --primary-navy: #1a2332;
-    --accent-gold: #d4af37;
-    --warm-gray: #f7f5f3;
-    --cool-gray: #e8e6e3;
-    --text-charcoal: #2c2c2c;
-    --text-medium: #6b6b6b;
-    --text-light: #a3a3a3;
-    --pure-white: #ffffff;
-    --sage-green: #9caf88;
-    --terracotta: #c17767;
-    --soft-blue: #7ba7bc;
-    --soft-gold: #c9a96e;
-    --accent-beige: #f5f3f0;
+  /* Existing palette */
+  --primary-navy: #1a2332;
+  --accent-gold: #d4af37;
+  --warm-gray: #f7f5f3;
+  --cool-gray: #e8e6e3;
+  --text-charcoal: #2c2c2c;
+  --text-medium: #6b6b6b;
+  --text-light: #a3a3a3;
+  --pure-white: #ffffff;
+  --sage-green: #9caf88;
+  --terracotta: #c17767;
+  --soft-blue: #7ba7bc;
+  --soft-gold: #c9a96e;
+  --accent-beige: #f5f3f0;
+
+  /* New additions */
+  --deep-forest: #2f3b2f;     /* moody green-black, pairs with sage */
+  --dusty-rose: #b58a84;      /* muted romantic accent */
+  --ochre: #d39c45;           /* deeper gold-brown for warmth */
+  --cobalt-accent: #3f5a86;   /* muted blue accent, sits under navy */
+  --plum: #5e3f58;            /* deep muted purple for richness */
+  --warm-taupe: #b3a391;      /* versatile neutral, bridges beige + gray */
+  --moss: #7d8b6a;            /* earthy green, complements terracotta */
+  --stone-gray: #d1cec9;      /* mid-tone neutral for balance */
+  --muted-teal: #5f7f7c;      /* sophisticated cool contrast */
+  --burnt-sienna: #a65a3f;    /* strong accent for data highlights */
 }
 
 body {
@@ -1199,7 +1212,7 @@ body {
   /* Data Visualization Section */
   .visualization-section-1 {
     padding: 140px 0;
-    background: var(--warm-white);
+    background: var(--soft-blue);
   }
 
   .viz-left-1 {
@@ -1247,7 +1260,7 @@ body {
   .viz-container-1 {
     background: white;
     border-radius: 12px;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid var(--border-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1316,7 +1329,7 @@ body {
   .chart-image-1 {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 1px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
