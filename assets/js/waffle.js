@@ -14,6 +14,8 @@ const chart = Plot.plot({
   label: null,
   height: 260,
   marginTop: 20,
+  marginLeft:120,
+  marginRight:120,
   marginBottom: 70,
   title: "Bus Fare Evasion",
   subtitle: "Pre vs Post Covid",

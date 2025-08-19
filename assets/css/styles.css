@@ -3,7 +3,14 @@
         padding: 0;
         box-sizing: border-box;
     } 
-
+    .chart-placeholder-image-1 img {
+      max-width: 100%;       /* scale to container width */
+      height: auto;          /* maintain aspect ratio */
+      display: block;        /* remove inline spacing */
+      margin-top: 10px; 
+      padding: 1%;     /* spacing below text/icon */
+    }
+    
     /* Header Navigation */
     .magazine-header {
         position: fixed;
