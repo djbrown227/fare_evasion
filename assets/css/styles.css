@@ -132,7 +132,7 @@
     /* Content Grid */
     .content-grid {
         display: grid;
-        gap: 6rem;
+        gap: 0rem;
     }
 
     /* Section Styling */
@@ -143,7 +143,7 @@
 
     .section-number {
         position: absolute;
-        left: -4rem;
+        left: -1rem;
         top: 0;
         font-family: 'Playfair Display', serif;
         font-size: 6rem;
@@ -1304,7 +1304,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    min-height: 400px;
     background: #fafafa;
     border-radius: 8px;
     border: 2px dashed var(--border-light);
