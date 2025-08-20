@@ -31,16 +31,16 @@ async function drawFareVsPassengersPlot() {
       Plot.line(filtered, {
         x: "date",
         y: "NoPay_Passengers",
-        stroke: "#4E79A7",
-        strokeWidth: 2,
+        stroke: "#FF9B00",
+        strokeWidth: 4,
         curve: "catmull-rom",
         title: d => `Non-Paying: ${(d.NoPay_Passengers / 1e6).toFixed(1)}M`
       }),
       Plot.line(filtered, {
         x: "date",
         y: "Paying Passengers",
-        stroke: "#F28E2B",
-        strokeWidth: 2,
+        stroke: "#2D9CDB",
+        strokeWidth: 4,
         curve: "catmull-rom",
         title: d => `Paying: ${(d["Paying Passengers"] / 1e6).toFixed(1)}M`
       }),
@@ -91,7 +91,7 @@ async function drawFareVsPassengersPlot() {
     },
     color: {
       domain: ["Non-Paying", "Paying"],
-      range: ["#4E79A7", "#F28E2B"],
+      range: ["#FF9B00", "#2D9CDB"],
       legend: true
     }
   });
