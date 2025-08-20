@@ -12,10 +12,10 @@ const total = 100;
 const chart = Plot.plot({
   axis: null,
   label: null,
-  height: 260,
+  height: 160,
   marginTop: 20,
-  marginLeft:120,
-  marginRight:120,
+  marginLeft:100,
+  marginRight:100,
   marginBottom: 70,
   title: "Bus Fare Evasion",
   subtitle: "Pre vs Post Covid",
@@ -24,7 +24,7 @@ const chart = Plot.plot({
   },
   marks: [
     // Bottom bar (baseline waffle grid) — force 10×10
-    Plot.axisFx({lineWidth: 10, anchor: "bottom", dy: 20}),
+    Plot.axisFx({lineWidth: 10, anchor: "bottom", dy: 20, fontSize: 14,}),
     Plot.waffleY({length: 1}, {
       y: total,
       multiple: 10,        // <-- 10 cells per row

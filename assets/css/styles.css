@@ -132,7 +132,7 @@
     /* Content Grid */
     .content-grid {
         display: grid;
-        gap: 0rem;
+        gap: 5rem;
     }
 
     /* Section Styling */
@@ -161,6 +161,7 @@
         margin-bottom: 1.5rem;
         line-height: 1.2;
         letter-spacing: -0.01em;
+        margin-top: 2rem;
     }
 
     .section-intro {
@@ -1305,14 +1306,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 400px;
-    background: #fafafa;
+    background: var(--pure-white);
     border-radius: 8px;
     border: 2px dashed var(--border-light);
   }
 
   .chart-placeholder-1 {
     text-align: center;
-    color: var(--light-gray);
+    color: var(--pure-white);
     font-style: italic;
   }
 

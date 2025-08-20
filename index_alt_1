@@ -79,7 +79,6 @@
                     </div>
                 </div>
             </section>
-            
         </section>
 
         <!-- Content Sections -->
@@ -92,6 +91,7 @@
                     Despite efforts like EAGLE Teams and awareness campaigns, evasion remains high. These patterns suggest enforcement alone won't solve the problem.</p>
             </section>
 
+            <!-- Data Showcase -->
             <div class="data-showcase">
                 <div class="data-card">
                     <div class="data-number">308M</div>
@@ -120,9 +120,7 @@
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <!-- Replace with your Observable Plot visualization -->
                         <div id="fare-passenger-plot" class="plot-container"></div>
-                        <!-- Load your visualization script -->
                         <script type="module" src="./assets/js/graph1.js"></script>
                     </div>
                 </div>
@@ -131,6 +129,8 @@
                     <span>Updated Quarterly • Next: October 2025</span>
                 </div>
             </div>
+
+            <!-- Side by Side Charts -->
             <div class="side-by-side-charts-1">
                 <div class="viz-container-1">
                   <div class="viz-header-1">
@@ -154,38 +154,39 @@
                   <div class="chart-container-1">
                     <div class="chart-placeholder-1">
                         <div class="chart-placeholder-image-1">
-                            <img src="./assets/images/bar_evasion.png" alt="Cost Efficiency Chart" />
-                          </div>
+                            <img src="./assets/images/bar_evasion.png" alt="Service Reliability Chart" />
+                        </div>
                     </div>
                   </div>
                 </div>
             </div>
-        
-         
-        <section>
-            <h2 class="section-title">Ridership</h2>
-            <p class="section-intro">A look into bus ridership numbers</p>
-            
-            <div class="row">
-                <div class="column">
-                    <div class="editorial-text">
-                        <h3>The Data Revolution</h3>
-                        <p>The digital transformation of modern enterprises has fundamentally altered how organizations approach data management and analysis. Traditional hierarchical structures are giving way to more fluid, network-based models that prioritize agility and responsiveness.</p>
-                        
-                        <p>This shift represents more than just technological advancement—it embodies a philosophical change in how we conceptualize organizational knowledge and decision-making processes.</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="editorial-text">
-                        <h3>Real-Time Analytics</h3>
-                        <p>The emergence of real-time analytics platforms has created unprecedented opportunities for immediate course correction and adaptive strategy implementation. Organizations can now respond to market shifts within hours rather than quarters.</p>
-                        
-                        <p>However, this capability comes with its own set of challenges. The pressure to act on immediate data can sometimes overshadow the importance of long-term strategic thinking.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
+            <!-- Ridership Section -->
+            <section>
+                <h2 class="section-title">Ridership</h2>
+                <p class="section-intro">A look into bus ridership numbers</p>
+                
+                <div class="row">
+                    <div class="column">
+                        <div class="editorial-text">
+                            <h3>The Data Revolution</h3>
+                            <p>The digital transformation of modern enterprises has fundamentally altered how organizations approach data management and analysis. Traditional hierarchical structures are giving way to more fluid, network-based models that prioritize agility and responsiveness.</p>
+                            
+                            <p>This shift represents more than just technological advancement—it embodies a philosophical change in how we conceptualize organizational knowledge and decision-making processes.</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="editorial-text">
+                            <h3>Real-Time Analytics</h3>
+                            <p>The emergence of real-time analytics platforms has created unprecedented opportunities for immediate course correction and adaptive strategy implementation. Organizations can now respond to market shifts within hours rather than quarters.</p>
+                            
+                            <p>However, this capability comes with its own set of challenges. The pressure to act on immediate data can sometimes overshadow the importance of long-term strategic thinking.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Data Showcase -->
             <div class="data-showcase">
                 <div class="data-card">
                     <div class="data-number">308M</div>
@@ -206,10 +207,10 @@
                 </div>
             </div>
 
-                        <!-- Multiple Chart Features -->
+            <!-- Multiple Chart Features -->
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Bus Projection Analysis</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
@@ -224,10 +225,9 @@
                 </div>
             </div>
 
-                        <!-- Multiple Chart Features -->
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Bus Evasion Trends</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
@@ -241,7 +241,6 @@
                     <span>Updated Quarterly • Next: October 2025</span>
                 </div>
             </div>
-        </div>
 
             <!-- Text + Visualization Section -->
             <section>
@@ -270,7 +269,6 @@
                             </div>
                             <div class="chart-content">
                                 <div id="subway-evasion-plot" class="plot-container"></div>
-                                <!-- Load your visualization script -->
                                 <script type="module" src="./assets/js/plotSubwayEvasion.js"></script>
                             </div>
                             <div class="chart-credits">
@@ -331,7 +329,7 @@
                 </div>
             </section>
 
-            <!-- Multiple Chart Features -->
+            <!-- Additional Chart Features -->
             <div class="chart-feature">
                 <div class="chart-header">
                     <h3 class="chart-title">Global Data Architecture Evolution</h3>
@@ -339,7 +337,7 @@
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <div id="bus-projection-plot" class="plot-container"></div>
+                        <div id="bus-projection-plot-2" class="plot-container"></div>
                         <script type="module" src="./assets/js/mckin_proj.js"></script>
                     </div>
                 </div>
@@ -351,12 +349,12 @@
 
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Bus Evasion Analysis</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <div id="bus-evasion-plot" class="plot-container"></div>
+                        <div id="bus-evasion-plot-2" class="plot-container"></div>
                         <script type="module" src="./assets/js/plotBusEvasion.js"></script>
                     </div>
                 </div>
@@ -368,12 +366,12 @@
 
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Fare and Passenger Analysis</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
                     <div class="chart-placeholder">
-                        <div id="fare-passenger-plot" class="plot-container"></div>
+                        <div id="fare-passenger-plot-2" class="plot-container"></div>
                         <script type="module" src="./assets/js/graph1.js"></script>
                     </div>
                 </div>
@@ -385,7 +383,7 @@
 
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Fare Evasion Bar Chart</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
@@ -402,7 +400,7 @@
 
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Waffle Chart Analysis</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
@@ -419,7 +417,7 @@
 
             <div class="chart-feature">
                 <div class="chart-header">
-                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <h3 class="chart-title">Revenue Line Chart</h3>
                     <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
                 </div>
                 <div class="chart-content">
@@ -461,8 +459,8 @@
         </section>
 
         <section>
-            <h2 class="section-title">Text + Text Layout</h2>
-            <p class="section-intro">Two columns of editorial content side by side.</p>
+            <h2 class="section-title">Feature Column Analysis</h2>
+            <p class="section-intro">Two columns with different styling approaches.</p>
             
             <div class="row">
                 <div class="column">
@@ -484,7 +482,7 @@
             </div>
         </section>
 
-        <!-- Primary Visualization -->
+        <!-- Sankey Diagram Section -->
         <div class="chart-feature">
             <div class="chart-header">
                 <h3 class="chart-title">Fare Payment & Transfers</h3>
@@ -496,10 +494,7 @@
 
             <div class="chart-content">
                 <div class="chart-placeholder">
-                    <!-- 🔁 Sankey will be rendered here -->
                     <div id="fare-sankey" class="plot-container"></div>
-
-                    <!-- ✅ Import and run Sankey script -->
                     <script type="module">
                         import { drawSankey } from './assets/js/sankey_fare.js';
                         drawSankey('fare-sankey');
@@ -513,6 +508,7 @@
             </div>
         </div>
 
+        <!-- Feature Column Layout -->
         <div class="demo-section">
             <div class="demo-label">Feature Column Layout</div>
             <div class="three-column-feature">
@@ -564,7 +560,7 @@
         </footer>
     </div>
 
-    <!-- Additional Header and Sections -->
+    <!-- Additional Sections -->
     <header class="header-1">
         <div class="container-1">
             <div class="header-content-1">
@@ -599,182 +595,4 @@
         <div class="container-1">
             <div class="two-column-1">
                 <div class="series-intro-left-1">
-                    <div class="intro-eyebrow-1">A Three-Part Investigation</div>
-                    <h2 class="series-title-1">The Future of MTA Buses</h2>
-                    <p class="series-description-1">
-                        NYC's bus system is at a tipping point. With ridership in flux, fare evasion climbing, and technology rapidly evolving, how can we reimagine the bus system to be faster, fairer, and more financially sustainable?
-                    </p>
-                </div>
-                
-                <div class="series-intro-right-1">
-                    <div class="series-parts-1">
-                        <div class="series-part-1">
-                            <div class="part-number-1">01</div>
-                            <div class="part-content-1">
-                                <h3 class="part-title-1">Crisis by the Numbers</h3>
-                                <p class="part-summary-1">An inside look at fare evasion, service performance, and why the system is breaking down—fueled by the latest MTA data.</p>
-                                <div class="part-meta-1">Data Analysis • Performance Metrics</div>
-                            </div>
-                        </div>
-                        
-                        <div class="series-part-1">
-                            <div class="part-number-1">02</div>
-                            <div class="part-content-1">
-                                <h3 class="part-title-1">Is Free the Future?</h3>
-                                <p class="part-summary-1">The economics of fare-free transit—costs, benefits, and how NYC could fund a bold new model.</p>
-                                <div class="part-meta-1">Economic Analysis • Policy Research</div>
-                            </div>
-                        </div>
-                        
-                        <div class="series-part-1">
-                            <div class="part-number-1">03</div>
-                            <div class="part-content-1">
-                                <h3 class="part-title-1">Redesigning the Ride</h3>
-                                <p class="part-summary-1">Policy and technology ideas to make MTA buses faster, smarter, and more rider-friendly in the years ahead.</p>
-                                <div class="part-meta-1">Innovation • Urban Planning</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Visualization Section -->
-    <section class="visualization-section-1">
-        <div class="container-1">
-            <div class="two-column-1">
-                <div class="viz-left-1">
-                    <div class="viz-eyebrow-1">Data Insights</div>
-                    <h2 class="viz-title-1">The Numbers Tell the Story</h2>
-                    <p class="viz-description-1">
-                        Real-time analysis of MTA bus performance reveals the scope of the crisis. These visualizations, built from the latest operational data, showcase the urgent need for systemic change.
-                    </p>
-                </div>
-                
-                <div class="viz-right-1">
-                    <div class="viz-grid-1">
-                        <div class="viz-container-1">
-                            <div class="viz-header-1">
-                                <h4 class="viz-chart-title-1">Fare Evasion Trends</h4>
-                                <p class="viz-chart-subtitle-1">Monthly evasion rates across boroughs</p>
-                            </div>
-                            <div class="chart-container-1">
-                                <div class="chart-placeholder-1">
-                                    <div class="chart-placeholder-icon-1">📊</div>
-                                    <div class="chart-placeholder-text-1">Fare Evasion Chart</div>
-                                    <div class="chart-placeholder-subtext-1">Replace with fare_evasion_chart.png</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="viz-container-1">
-                            <div class="viz-header-1">
-                                <h4 class="viz-chart-title-1">Ridership Decline</h4>
-                                <p class="viz-chart-subtitle-1">Daily ridership vs pre-pandemic levels</p>
-                            </div>
-                            <div class="chart-container-1">
-                                <div class="chart-placeholder-1">
-                                    <div class="chart-placeholder-icon-1">📈</div>
-                                    <div class="chart-placeholder-text-1">Ridership Trends Chart</div>
-                                    <div class="chart-placeholder-subtext-1">Replace with ridership_trends_chart.png</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="timeline-section-1">
-        <div class="container-1">
-          <div class="two-column-1">
-            <div class="timeline-left-1">
-              <div class="timeline-eyebrow-1">Implementation</div>
-              <h2 class="timeline-title-1">A Path Forward</h2>
-              <p class="timeline-description-1">
-                A strategic roadmap for transforming NYC's bus system through measured implementation and continuous evaluation.
-              </p>
-            </div>
-            
-            <div class="timeline-right-1">
-              <div class="timeline-steps-1">
-                <div class="timeline-step-1">
-                  <div class="step-number-1">1</div>
-                  <div class="step-content-1">
-                    <h4 class="step-title-1">Assessment Phase</h4>
-                    <p class="step-description-1">Comprehensive analysis of current fare collection costs, ridership patterns, and revenue streams to establish baseline metrics.</p>
-                    <div class="step-meta-1">6 Months • Data Collection</div>
-                  </div>
-                </div>
-                
-                <div class="timeline-step-1">
-                  <div class="step-number-1">2</div>
-                  <div class="step-content-1">
-                    <h4 class="step-title-1">Pilot Program</h4>
-                    <p class="step-description-1">Limited implementation on select routes to test operational impacts, ridership changes, and system performance under fare-free conditions.</p>
-                    <div class="step-meta-1">12 Months • Select Routes</div>
-                  </div>
-                </div>
-                
-                <div class="timeline-step-1">
-                  <div class="step-number-1">3</div>
-                  <div class="step-content-1">
-                    <h4 class="step-title-1">Full Implementation</h4>
-                    <p class="step-description-1">System-wide rollout with alternative funding mechanisms, enhanced service capacity, and comprehensive monitoring of outcomes.</p>
-                    <div class="step-meta-1">24 Months • System-Wide</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Additional Charts Section -->
-      <section class="additional-charts-section-1">
-        <div class="container-1">
-          <div class="additional-charts-header-1">
-            <div class="charts-eyebrow-1">Supporting Analysis</div>
-            <h2 class="charts-title-1">Comparative Performance Metrics</h2>
-            <p class="charts-description-1">
-              Additional data perspectives that inform policy decisions and operational improvements across the transit system.
-            </p>
-          </div>
-          
-          <div class="side-by-side-charts-1">
-            <div class="viz-container-1">
-              <div class="viz-header-1">
-                <h4 class="viz-chart-title-1">Cost Efficiency Analysis</h4>
-                <p class="viz-chart-subtitle-1">Operating costs per mile by service type</p>
-              </div>
-              <div class="chart-container-1">
-                <div class="chart-placeholder-1">
-                  <div class="chart-placeholder-icon-1">💰</div>
-                  <div class="chart-placeholder-text-1">Cost Analysis Chart</div>
-                  <div class="chart-placeholder-subtext-1">Replace with cost_analysis_chart.png</div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="viz-container-1">
-              <div class="viz-header-1">
-                <h4 class="viz-chart-title-1">Service Reliability</h4>
-                <p class="viz-chart-subtitle-1">On-time performance by route category</p>
-              </div>
-              <div class="chart-container-1">
-                <div class="chart-placeholder-1">
-                  <div class="chart-placeholder-icon-1">⏱️</div>
-                  <div class="chart-placeholder-text-1">Reliability Chart</div>
-                  <div class="chart-placeholder-subtext-1">Replace with reliability_chart.png</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="footer-space-1"></div>
-    </body>
-    </html>
+                    <div class="

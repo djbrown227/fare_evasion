@@ -31,7 +31,7 @@ async function drawLineChartWithLabels() {
       Plot.axisY({
         scale: "y",
         label: "Fare Evasion (% of Ridership)",
-        fontSize: 12,      // tick labels
+        fontSize: 14,      // tick labels
         labelFont: "Helvetica", // font for the axis label
         labelFontSize: 18,          // size for the axis label
         tickFormat: d => (d * 100).toFixed(0) + "%"
@@ -41,7 +41,7 @@ async function drawLineChartWithLabels() {
         scale: "x",
         label: "Year / Quarter",
         tickRotate: -45,
-        fontSize: 12,       // tick labels
+        fontSize: 14,       // tick labels
         labelFont: "Helvetica", // font for the axis label
         labelFontSize: 18,          // size for the axis label
         tickFormat: d3.timeFormat("%Y Q%q"),
@@ -70,14 +70,14 @@ async function drawLineChartWithLabels() {
         dy: 15,
         dx: -2,
         fontWeight: "bold",
-        fontSize: 14, // <-- font size for data labels
+        fontSize: 16, // <-- font size for data labels
         textAnchor: "start"
       }),
       Plot.ruleY([0])
     ]
   });
 
-  document.getElementById("fare-evasion-bar").appendChild(chart);
+  document.getElementById("fare-evasion-line").appendChild(chart);
 }
 
 drawLineChartWithLabels();
