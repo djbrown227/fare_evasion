@@ -25,23 +25,34 @@ async function drawLineChartWithLabels() {
     marginRight: 100,
     marginBottom: 100,
     marginTop: 100,
-    style: { background: "#fff", fontFamily: "Helvetica" }, // optional: set font for all text
+    style: { background: "#fff", fontFamily: "Helvetica" },
+    y: {
+      domain: [0, 0.50],   // 👈 adjust as needed (0–25% here)
+      label: "Fare Evasion (% of Ridership)",
+      tickFormat: d => (d * 100).toFixed(0) + "%"
+    }, 
+    x: {
+      label: "Year / Quarter",
+      tickFormat: d3.timeFormat("%Y Q%q"),
+      ticks: Plot.timeInterval("6 months")
+    },
     marks: [
       // Explicit axes with fontSize
       Plot.axisY({
         scale: "y",
         label: "Fare Evasion (% of Ridership)",
-        fontSize: 14,      // tick labels
+        fontSize: 16,      // tick labels
         labelFont: "Helvetica", // font for the axis label
-        labelFontSize: 18,          // size for the axis label
-        tickFormat: d => (d * 100).toFixed(0) + "%"
+        labelFontSize: 16,          // size for the axis label
+        tickFormat: d => (d * 100).toFixed(0) + "%",
+        ticks:5
       }),
       
       Plot.axisX({
         scale: "x",
         label: "Year / Quarter",
         tickRotate: -45,
-        fontSize: 14,       // tick labels
+        fontSize: 16,       // tick labels
         labelFont: "Helvetica", // font for the axis label
         labelFontSize: 18,          // size for the axis label
         tickFormat: d3.timeFormat("%Y Q%q"),

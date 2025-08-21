@@ -2,8 +2,8 @@ import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm"
 
 // Embedded data
 const survey = [
-  {question: "Pre-Covid Median Fare Evasion", yes: 22},
-  {question: "Post-Covid Median Fare Evasion", yes: 37}
+  {question: "Pre-Covid", yes: 22},
+  {question: "Post-Covid", yes: 37}
 ];
 
 const chart = Plot.plot({
@@ -23,7 +23,7 @@ const chart = Plot.plot({
     Plot.axisY({
       scale: "y",
       label: "Percent of Respondents",
-      fontSize: 14,        // tick labels
+      fontSize: 16,        // tick labels
       labelFont: "Helvetica",
       labelFontSize: 14,   // axis label
       tickFormat: d => d + "%"
@@ -53,7 +53,7 @@ const chart = Plot.plot({
       y: "yes",
       text: d => d.yes + "%",
       dy: -10,
-      fontSize: 20,
+      fontSize: 16,
       fontWeight: "bold",
       textAnchor: "middle",
       fill: "orange"
