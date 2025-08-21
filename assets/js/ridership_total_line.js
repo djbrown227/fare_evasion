@@ -27,8 +27,8 @@ async function drawYearlyRidershipLine() {
   const labeled = [first, last, highest, yr2019].filter(Boolean);
 
   const chart = Plot.plot({
-    width: 900,
-    height: 500,
+    width: 1000,
+    height: 600,
     marginLeft: 100,
     marginRight: 200,
     marginBottom: 100,
@@ -73,17 +73,17 @@ async function drawYearlyRidershipLine() {
         y: "Ridership",
         stroke: "#FF9B00",
         strokeWidth: 4,
-        curve: "monotone-x"
+        curve: "linear"
       }),
 
       // Dots
-      Plot.dot(raw, {
-        x: "Year_clean",
-        y: "Ridership",
-        r: 5,
-        fill: d => (d.Projected ? "steelblue" : "#FF9B00"),
-        title: d => `${d.Year}: ${d3.format(",")(d.Ridership)}`
-      }),
+      //Plot.dot(raw, {
+        //x: "Year_clean",
+        //y: "Ridership",
+        //r: 5,
+        //fill: d => (d.Projected ? "steelblue" : "#FF9B00"),
+        //title: d => `${d.Year}: ${d3.format(",")(d.Ridership)}`
+      //}),
 
       // 👉 Labels with "Projected" note for 2025*
       Plot.text(labeled, {
