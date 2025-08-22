@@ -73,7 +73,7 @@ async function drawYearlyRidershipLine() {
         y: "Ridership",
         stroke: "#FF9B00",
         strokeWidth: 4,
-        curve: "linear"
+        curve: "monotone-x"
       }),
 
       // Dots
