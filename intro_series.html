@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight — Data & Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+    :root {
+      /* Existing palette */
+      --primary-navy: #1a2332;
+      --accent-gold: #d4af37;
+      --warm-gray: #f7f5f3;
+      --cool-gray: #e8e6e3;
+      --text-charcoal: #2c2c2c;
+      --text-medium: #6b6b6b;
+      --text-light: #a3a3a3;
+      --pure-white: #ffffff;
+      --sage-green: #9caf88;
+      --terracotta: #c17767;
+      --soft-blue: #7ba7bc;
+      --soft-gold: #c9a96e;
+      --accent-beige: #f5f3f0;
+
+      /* New additions */
+      --deep-forest: #2f3b2f;     /* moody green-black, pairs with sage */
+      --dusty-rose: #b58a84;      /* muted romantic accent */
+      --ochre: #d39c45;           /* deeper gold-brown for warmth */
+      --cobalt-accent: #3f5a86;   /* muted blue accent, sits under navy */
+      --plum: #5e3f58;            /* deep muted purple for richness */
+      --warm-taupe: #b3a391;      /* versatile neutral, bridges beige + gray */
+      --moss: #7d8b6a;            /* earthy green, complements terracotta */
+      --stone-gray: #d1cec9;      /* mid-tone neutral for balance */
+      --muted-teal: #5f7f7c;      /* sophisticated cool contrast */
+      --burnt-sienna: #a65a3f;    /* strong accent for data highlights */
+      --border-light: #e8e6e3;
+      --primary-charcoal: #2c2c2c;
+      --secondary-gray: #6b6b6b;
+      --light-gray: #a3a3a3;
+      --warm-white: #ffffff;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.0;
+        color: var(--text-charcoal);
+        background: var(--pure-white);
+        font-size: 16px;
+        font-weight: 400;
+        padding: 1rem;
+    }
+
+    /* Header Navigation */
+    .magazine-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+        border-bottom: 1px solid var(--cool-gray);
+    }
+
+    .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .magazine-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--primary-navy);
+        letter-spacing: -0.02em;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: var(--text-medium);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--accent-gold);
+    }
+
+    .issue-info {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--text-light);
+        letter-spacing: 0.05em;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+
+    .container-1 {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .hero-category {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 1.0rem;
+    }
+
+    .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 500;
+        color: var(--text-charcoal);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-medium);
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    /* Series Introduction */
+    .series-intro-1 {
+        padding: 120px 0 140px;
+        background: var(--accent-beige);
+        margin: 120px -60px 120px -60px;
+    }
+
+    .series-intro-1 .container-1 {
+        padding: 0 120px;
+    }
+
+    .two-column-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+
+    .series-intro-left-1 {
+        padding-right: 40px;
+        position: sticky;
+        top: 100px;
+    }
+
+    .series-intro-right-1 {
+        padding-left: 40px;
+    }
+
+    .intro-eyebrow-1 {
+        font-size: 0.7rem;
+        color: var(--light-gray);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    .series-title-1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.8rem;
+        font-weight: 300;
+        color: var(--primary-charcoal);
+        margin-bottom: 10px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+    }
+
+    .series-description-1 {
+        font-size: 1.15rem;
+        color: var(--secondary-gray);
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    /* Series Parts */
+    .series-parts-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .series-part-1 {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 40px;
+        align-items: start;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border-light);
+        transition: transform 0.3s ease;
+    }
+
+    .series-part-1:hover {
+        transform: translateX(10px);
+    }
+
+    .series-part-1:last-child {
+        border-bottom: none;
+    }
+
+    .part-number-1 {
+        font-size: 5rem;
+        font-family: 'Playfair Display', serif;
+        font-weight: 300;
+        color: var(--soft-gold);
+        line-height: 0.8;
+        opacity: 0.9;
+    }
+
+    .part-content-1 {
+        padding-top: 20px;
+    }
+
+    .part-title-1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--primary-charcoal);
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .part-summary-1 {
+        font-size: 1rem;
+        color: var(--secondary-gray);
+        line-height: 1.8;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .part-meta-1 {
+        font-size: 0.85rem;
+        color: var(--light-gray);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    /* Quote Styling */
+    .featured-quote {
+        margin: 5rem 0;
+        text-align: center;
+        position: relative;
+    }
+
+    .quote-mark {
+        font-family: 'Playfair Display', serif;
+        font-size: 8rem;
+        color: var(--cool-gray);
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .quote-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text-charcoal);
+        line-height: 1.4;
+        font-style: italic;
+        max-width: 50ch;
+        margin: 0 auto 2rem;
+    }
+
+    .quote-attribution {
+        font-size: 0.875rem;
+        color: var(--text-medium);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Demo Sections */
+    .demo-section {
+        margin: 6rem 0;
+        padding: 4rem 0;
+        border-bottom: 2px solid var(--cool-gray);
+    }
+
+    .demo-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* 4-Column Feature Layout with Sticky Scroll Effect */
+    .four-column-feature-container {
+        position: relative;
+        margin: 5rem 0;
+        min-height: 200vh; /* Ensures enough scroll space */
+    }
+
+    .four-column-feature {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+        position: sticky;
+        top: 20vh;
+        z-index: 10;
+    }
+
+    .feature-column {
+        background: var(--warm-gray);
+        padding: 2.5rem;
+        position: relative;
+        border-radius: 4px;
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 0.4;
+        transform: translateY(20px);
+    }
+
+    .feature-column.active {
+        opacity: 1;
+        transform: translateY(0);
+        background: var(--pure-white);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-column::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        background: rgba(212, 175, 55, 0.1);
+        border-radius: 50%;
+        transform: translate(30%, 30%);
+        transition: all 0.6s ease;
+    }
+
+    .feature-column.active::after {
+        background: rgba(212, 175, 55, 0.4);
+        width: 100px;
+        height: 100px;
+    }
+
+    .feature-column:nth-child(2)::after {
+        background: rgba(156, 175, 136, 0.15);
+    }
+
+    .feature-column:nth-child(2).active::after {
+        background: rgba(156, 175, 136, 0.5);
+        width: 100px;
+        height: 100px;
+    }
+
+    .feature-column:nth-child(3)::after {
+        background: rgba(123, 167, 188, 0.15);
+    }
+
+    .feature-column:nth-child(3).active::after {
+        background: rgba(123, 167, 188, 0.5);
+        width: 100px;
+        height: 100px;
+    }
+
+    .feature-column:nth-child(4)::after {
+        background: rgba(193, 119, 103, 0.15);
+    }
+
+    .feature-column:nth-child(4).active::after {
+        background: rgba(193, 119, 103, 0.5);
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Active column text enhancement */
+    .feature-column.active .column-subtitle {
+        color: var(--accent-gold);
+        font-weight: 600;
+    }
+
+    .feature-column.active .column-title {
+        color: var(--primary-navy);
+        transform: scale(1.02);
+    }
+
+    .feature-column.active .column-text {
+        color: var(--text-charcoal);
+        font-weight: 400;
+    }
+
+    .column-subtitle {
+        font-size: 0.875rem;
+        color: var(--accent-gold);
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .column-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--text-charcoal);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .column-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--text-charcoal);
+        margin-bottom: 1.5rem;
+    }
+
+    .column-text:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 4-Column Timeline/Process with Sticky Scroll Effect */
+    .four-column-timeline-container {
+        position: relative;
+        margin: 5rem 0;
+        min-height: 200vh; /* Ensures enough scroll space */
+    }
+
+    .four-column-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        position: sticky;
+        top: 20vh;
+        z-index: 10;
+        background: var(--pure-white);
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .timeline-step {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        background: var(--pure-white);
+        position: relative;
+        z-index: 2;
+        border-radius: 4px;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.3);
+        color: var(--text-medium);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 auto 1.5rem;
+        position: relative;
+        z-index: 3;
+        transition: all 0.6s ease;
+    }
+
+    .timeline-step.active .step-number {
+        background: var(--accent-gold);
+        color: white;
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .step-number.sage {
+        background: rgba(156, 175, 136, 0.3);
+    }
+
+    .timeline-step.active .step-number.sage {
+        background: var(--sage-green);
+        color: white;
+        box-shadow: 0 8px 20px rgba(156, 175, 136, 0.3);
+    }
+
+    .step-number.blue {
+        background: rgba(123, 167, 188, 0.3);
+    }
+
+    .timeline-step.active .step-number.blue {
+        background: var(--soft-blue);
+        color: white;
+        box-shadow: 0 8px 20px rgba(123, 167, 188, 0.3);
+    }
+
+    .step-number.terra {
+        background: rgba(193, 119, 103, 0.3);
+    }
+
+    .timeline-step.active .step-number.terra {
+        background: var(--terracotta);
+        color: white;
+        box-shadow: 0 8px 20px rgba(193, 119, 103, 0.3);
+    }
+
+    /* Footer */
+    .content-footer {
+        background: var(--warm-gray);
+        padding: 2rem;
+        margin: 0rem 0 0;
+        text-align: center;
+    }
+
+    .footer-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--text-charcoal);
+        margin-bottom: 1rem;
+    }
+
+    .footer-text {
+        color: var(--text-medium);
+        font-size: 0.875rem;
+        line-height: 1.6;
+        max-width: 60ch;
+        margin: 0 auto;
+    }
+
+    .footer-space-1 {
+        height: 0px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .four-column-feature,
+        .four-column-timeline {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .four-column-feature-container,
+        .four-column-timeline-container {
+            min-height: 120vh;
+        }
+
+        .four-column-timeline::before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .container {
+            padding: 5rem 2rem 2rem;
+        }
+
+        .container-1 { 
+            padding: 0 40px; 
+        }
+
+        .series-intro-1 .container-1 { 
+            padding: 0 80px; 
+        }
+
+        .series-intro-1 { 
+            margin-left: -40px; 
+            margin-right: -40px; 
+        }
+
+        .header-content {
+            padding: 1rem 2rem;
+        }
+
+        .two-column-1 { 
+            gap: 60px; 
+        }
+
+        .four-column-feature,
+        .four-column-timeline {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .four-column-feature-container,
+        .four-column-timeline-container {
+            min-height: 100vh;
+        }
+
+        .hero-title { 
+            font-size: 4rem; 
+        }
+
+        .series-title-1 { 
+            font-size: 3.2rem; 
+        }
+
+        .four-column-timeline::before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-1 { 
+            padding: 0 20px; 
+        }
+
+        .series-intro-1 .container-1 { 
+            padding: 0 40px; 
+        }
+
+        .series-intro-1 { 
+            margin-left: -20px; 
+            margin-right: -20px; 
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .two-column-1 {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .series-intro-left-1,
+        .series-intro-right-1 {
+            padding: 0;
+        }
+
+        .hero-title { 
+            font-size: 3.5rem; 
+            letter-spacing: -2px;
+        }
+
+        .series-title-1 { 
+            font-size: 2.8rem; 
+        }
+
+        .part-number-1 { 
+            font-size: 4rem; 
+        }
+
+        .series-part-1 { 
+            grid-template-columns: 80px 1fr;
+        }
+
+        .feature-column {
+            padding: 2rem;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="magazine-header">
+        <div class="header-content">
+            <div class="magazine-title">Insight</div>
+            <nav class="nav-menu">
+            </nav>
+            <div class="issue-info">MTA Buses</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-category">Urban Mobility Analysis</div>
+            <h1 class="hero-title">The State of NYC Buses</h1>
+            <p class="hero-subtitle">Buses may be slower and often stuck in traffic, but they remain essential for millions—linking neighborhoods the subway doesn't reach and serving as a lifeline for those who depend on transit. Yet fare evasion, sluggish speeds, and rising costs raise a pressing question: how well is the system working for New Yorkers?</p>
+            
+            <!-- Series Introduction -->
+            <section class="series-intro-1">
+                <div class="container-1">
+                    <div class="two-column-1">
+                        <div class="series-intro-left-1">
+                            <div class="intro-eyebrow-1">A Four-Part Investigation</div>
+                            <h2 class="series-title-1">The Future of MTA Buses</h2>
+                            <p class="series-description-1">
+                                NYC's bus system is at a tipping point. With ridership in flux, fare evasion climbing, and technology rapidly evolving, how can we reimagine the bus system to be faster, fairer, and more financially sustainable?
+                            </p>
+                        </div>
+                        
+                        <div class="series-intro-right-1">
+                            <div class="series-parts-1">
+                                <div class="series-part-1">
+                                    <div class="part-number-1">01</div>
+                                    <div class="part-content-1">
+                                        <h3 class="part-title-1">Crisis by the Numbers</h3>
+                                        <p class="part-summary-1">An inside look at fare evasion, service performance, and why the system is breaking down—fueled by the latest MTA data.</p>
+                                        <div class="part-meta-1">Data Analysis • Performance Metrics</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="series-part-1">
+                                    <div class="part-number-1">02</div>
+                                    <div class="part-content-1">
+                                        <h3 class="part-title-1">Is Free the Future?</h3>
+                                        <p class="part-summary-1">The economics of fare-free transit—costs, benefits, and how NYC could fund a bold new model.</p>
+                                        <div class="part-meta-1">Economic Analysis • Policy Research</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="series-part-1">
+                                    <div class="part-number-1">03</div>
+                                    <div class="part-content-1">
+                                        <h3 class="part-title-1">Redesigning the Ride</h3>
+                                        <p class="part-summary-1">Policy and technology ideas to make MTA buses faster, smarter, and more rider-friendly in the years ahead.</p>
+                                        <div class="part-meta-1">Innovation • Urban Planning</div>
+                                    </div>
+                                </div>
+
+                                <div class="series-part-1">
+                                    <div class="part-number-1">04</div>
+                                    <div class="part-content-1">
+                                        <h3 class="part-title-1">Community Impact</h3>
+                                        <p class="part-summary-1">How transit changes affect neighborhoods, accessibility, and social equity across NYC's diverse communities.</p>
+                                        <div class="part-meta-1">Community Research • Social Impact</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Quote -->
+            <div class="featured-quote">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">The organizations that will thrive in the next decade are those that view data architecture not as infrastructure, but as the foundation of organizational intelligence.</p>
+                <div class="quote-attribution">Dr. Elena Rodriguez, Strategic Technology Institute</div>
+            </div>
+
+            <!-- 4-Column Feature Layout with Sticky Scroll -->
+            <div class="demo-section">
+                <div class="demo-label">4-Column Sticky Feature Layout</div>
+                <div class="four-column-feature-container">
+                    <div class="four-column-feature" id="sticky-feature">
+                        <div class="feature-column">
+                            <div class="column-subtitle">Economic Analysis</div>
+                            <h3 class="column-title">Revenue Impact</h3>
+                            <p class="column-text">Fare revenue represents 23% of total MTA bus operating costs, but collection infrastructure consumes significant resources.</p>
+                        </div>
+                        <div class="feature-column">
+                            <div class="column-subtitle">Operational Efficiency</div>
+                            <h4 class="column-title">Service Speed</h4>
+                            <p class="column-text">Eliminating fare collection could reduce average boarding time by 15-25 seconds per passenger.</p>
+                        </div>
+                        <div class="feature-column">
+                            <div class="column-subtitle">Ridership Data</div>
+                            <h4 class="column-title">Usage Patterns</h4>
+                            <p class="column-text">Free transit programs in other cities show 20-40% ridership increases within the first year.</p>
+                        </div>
+                        <div class="feature-column">
+                            <div class="column-subtitle">Social Equity</div>
+                            <h4 class="column-title">Access Impact</h4>
+                            <p class="column-text">Fare-free transit disproportionately benefits low-income communities and improves mobility equity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4-Column Timeline Section with Sticky Scroll -->
+            <div class="demo-section">
+                <div class="demo-label">4-Column Sticky Timeline Process</div>
+                <div class="four-column-timeline-container">
+                    <div class="four-column-timeline" id="sticky-timeline">
+                        <div class="timeline-step">
+                            <div class="step-number">1</div>
+                            <h4 class="column-title">Assessment</h4>
+                            <p class="column-text">Comprehensive analysis of current costs, ridership patterns, and revenue streams to establish baseline metrics.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number sage">2</div>
+                            <h4 class="column-title">Pilot Program</h4>
+                            <p class="column-text">Limited implementation on select routes to test operational impacts and system performance.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number blue">3</div>
+                            <h4 class="column-title">Scaling Up</h4>
+                            <p class="column-text">Gradual expansion to additional routes based on pilot results and operational learnings.</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number terra">4</div>
+                            <h4 class="column-title">Full Integration</h4>
+                            <p class="column-text">System-wide implementation with alternative funding mechanisms and comprehensive outcome monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-space-1"></div>
+        
+        <!-- Footer -->
+        <footer class="content-footer">
+            <h4 class="footer-title">Research Methodology</h4>
+            <p class="footer-text">This comprehensive analysis draws from an extensive 18-month research initiative, incorporating quantitative data from 150+ organizations across 30 countries, combined with qualitative insights from industry leaders and strategic technology experts. All findings are validated through multiple analytical frameworks and peer review processes.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Sticky scroll effect for feature columns
+        function initStickyFeatureEffect() {
+            const container = document.querySelector('.four-column-feature-container');
+            const columns = document.querySelectorAll('.feature-column');
+            
+            if (!container || !columns.length) return;
+            
+            function updateActiveColumn() {
+                const containerRect = container.getBoundingClientRect();
+                const containerTop = containerRect.top;
+                const containerHeight = containerRect.height;
+                const viewportHeight = window.innerHeight;
+                
+                // Calculate scroll progress through the container
+                const scrollProgress = Math.max(0, Math.min(1, -containerTop / (containerHeight - viewportHeight)));
+                
+                // Determine which column should be active based on scroll progress
+                const totalColumns = columns.length;
+                const activeIndex = Math.min(Math.floor(scrollProgress * totalColumns), totalColumns - 1);
+                
+                // Update column states
+                columns.forEach((column, index) => {
+                    if (index <= activeIndex) {
+                        column.classList.add('active');
+                    } else {
+                        column.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            function handleScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        updateActiveColumn();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            
+            // Initial call
+            updateActiveColumn();
+        }
+
+        // Sticky scroll effect for timeline steps
+        function initStickyTimelineEffect() {
+            const container = document.querySelector('.four-column-timeline-container');
+            const timeline = document.querySelector('.four-column-timeline');
+            const steps = document.querySelectorAll('.timeline-step');
+            
+            if (!container || !timeline || !steps.length) return;
+            
+            function updateActiveStep() {
+                const containerRect = container.getBoundingClientRect();
+                const containerTop = containerRect.top;
+                const containerHeight = containerRect.height;
+                const viewportHeight = window.innerHeight;
+                
+                // Calculate scroll progress through the container
+                const scrollProgress = Math.max(0, Math.min(1, -containerTop / (containerHeight - viewportHeight)));
+                
+                // Determine which step should be active based on scroll progress
+                const totalSteps = steps.length;
+                const activeIndex = Math.min(Math.floor(scrollProgress * totalSteps), totalSteps - 1);
+                
+                // Update step states - only add 'active' class to activate step numbers
+                steps.forEach((step, index) => {
+                    if (index <= activeIndex) {
+                        step.classList.add('active');
+                    } else {
+                        step.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            function handleScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        updateActiveStep();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            
+            // Initial call
+            updateActiveStep();
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            initStickyFeatureEffect();
+            initStickyTimelineEffect();
+        });
+    </script>
+</body>
+</html>
