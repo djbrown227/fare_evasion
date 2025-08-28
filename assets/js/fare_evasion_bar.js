@@ -1,52 +1,35 @@
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 
-// Embedded data
+// Embedded data with custom colors
 const survey = [
-  {question: "Pre-Covid", yes: 22},
-  {question: "Post-Covid", yes: 37}
+  { question: "Pre-Covid", yes: 22, color: "lightgray" },
+  { question: "Post-Covid", yes: 37, color: "#FF9B00" }
 ];
 
 const chart = Plot.plot({
-  width: 800,
-  height: 360,
+  width: 600,
+  height: 400,
   marginTop: 60,
   marginLeft: 100,
   marginRight: 100,
   marginBottom: 100,
   style: { background: "#fff", fontFamily: "Helvetica" },
   y: {
-    domain: [0, 50],   // 👈 adjust this as needed
+    domain: [0, 50],   // adjust as needed
+    label: "Percent of Respondents",
     tickFormat: d => d + "%"
   },
+  x: {
+    domain: survey.map(d => d.question) // ensures only your two labels
+  },
   marks: [
-    // Explicit axes with font settings
-    Plot.axisY({
-      scale: "y",
-      label: "Percent of Respondents",
-      fontSize: 16,        // tick labels
-      labelFont: "Helvetica",
-      labelFontSize: 14,   // axis label
-      tickFormat: d => d + "%"
-
-    }),
-
-    Plot.axisX({
-      scale: "x",
-      label: null,
-      fontSize: 16,        // tick labels
-      labelFont: "Helvetica",
-      labelFontSize: 14,
-      tickRotate: 0,       // keep labels horizontal
-      ticks: survey.map(d => d.question) // ensures only your two labels
-    }),
-
-    // Bars
+    // Bars with per-bar colors
     Plot.barY(survey, {
       x: "question",
       y: "yes",
-      fill: "orange"
+      fill: d => d.color
     }),
-
+    
     // Percentage labels above bars
     Plot.text(survey, {
       x: "question",
@@ -56,7 +39,27 @@ const chart = Plot.plot({
       fontSize: 16,
       fontWeight: "bold",
       textAnchor: "middle",
-      fill: "orange"
+      fill: "black"
+    }),
+
+    // Explicit X-axis
+    Plot.axisX({
+      scale: "x",
+      label: null,
+      fontSize: 16,
+      labelFont: "Helvetica",
+      labelFontSize: 14,
+      tickRotate: 0
+    }),
+
+    // Explicit Y-axis
+    Plot.axisY({
+      scale: "y",
+      label: "Percent of Respondents",
+      fontSize: 16,
+      labelFont: "Helvetica",
+      labelFontSize: 14,
+      tickFormat: d => d + "%"
     })
   ]
 });

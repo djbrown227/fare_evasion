@@ -8,7 +8,9 @@ async function drawStackedBar() {
   // Define bins
   const bins = [0, 5, 7, 9, 11, 15];
   const labels = ["≤5 mph", "5–7 mph", "7–9 mph", "9–11 mph", ">11 mph"];
-  const colors = ["#d73027","#fc8d59","#fee08b","#91bfdb","#4575b4"];
+  
+  // Highlight "5–7 mph" with a contrasting color
+  const colors = ["#d73027","#FF9B00","#fee08b","#91bfdb","#4575b4"];
 
   // Bin speeds into categories
   const binned = speeds.map(s => {
@@ -24,7 +26,7 @@ async function drawStackedBar() {
   const total = speeds.length;
 
   // Convert to percentages
-  const pctData = labels.map((label, i) => ({
+  const pctData = labels.map(label => ({
     bin: label,
     percent: (counts.get(label) ?? 0) / total * 100
   }));
@@ -46,6 +48,7 @@ async function drawStackedBar() {
     height: 500,
     marginLeft: 80,
     marginBottom: 80,
+    marginTop:50,
     style: { background: "#fff", fontFamily: "Helvetica" },
     x: {
       label: "Bus Routes",
@@ -62,6 +65,23 @@ async function drawStackedBar() {
       label: "Speed Range"
     },
     marks: [
+      // Explicit axes
+      Plot.axisX({
+        scale: "x",
+        label: "Bus Routes",
+        fontSize: 14,
+        labelFont: "Helvetica",
+        labelFontSize: 16
+      }),
+      Plot.axisY({
+        scale: "y",
+        label: "Percentage of Routes (%)",
+        fontSize: 14,
+        labelFont: "Helvetica",
+        labelFontSize: 16,
+        tickFormat: d => d + "%"
+      }),
+
       // Stacked bar
       Plot.barY(pctDataWithOffsets, {
         x: () => "All Routes",
@@ -76,10 +96,11 @@ async function drawStackedBar() {
         x: () => "All Routes",
         y: d => d.yMid,
         text: d => `${d.percent.toFixed(1)}%`,
-        fill: "black",
+        fill: d => d.bin === "5–7 mph" ? "black" : "gray",
+        fontWeight: d => d.bin === "5–7 mph" ? "bold" : "normal",
         fontSize: 12,
         textAnchor: "middle",
-        dx:130
+        dx: 130
       })
     ]
   });

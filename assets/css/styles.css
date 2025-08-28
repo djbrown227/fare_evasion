@@ -144,7 +144,7 @@
     .section-number {
         position: absolute;
         left: -1rem;
-        top: 0;
+        top: -4rem;
         font-family: 'Playfair Display', serif;
         font-size: 6rem;
         font-weight: 300;
@@ -167,7 +167,7 @@
     .section-intro {
         font-size: 1.125rem;
         color: var(--text-medium);
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
         font-weight: 300;
         line-height: 1.7;
         max-width: 65ch;
@@ -178,7 +178,7 @@
         background: var(--warm-gray);
         border-radius: 0;
         overflow: hidden;
-        margin: 1rem 0;
+        margin: 0rem 0;
         position: relative;
         transition: transform 0.3s ease;
         padding-top: 0;
@@ -878,7 +878,7 @@ body {
 
 /* Two Column Layout */
 .row {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 .row:after {

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight — Data & Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head> 
+<body>
+    <!-- Fixed Header -->
+    <header class="magazine-header">
+        <div class="header-content">
+            <div class="magazine-title">Insight</div>
+            <nav class="nav-menu">
+            </nav>
+            <div class="issue-info">MTA Buses</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-category">Urban Mobility Analysis</div>
+            <h1 class="hero-title">The State of NYC Buses</h1>
+            <p class="hero-subtitle">Buses may be slower and often stuck in traffic, but they remain essential for millions—linking neighborhoods the subway doesn’t reach and serving as a lifeline for those who depend on transit. Yet fare evasion, sluggish speeds, and rising costs raise a pressing question: how well is the system working for New Yorkers?</p>
+      <!-- Series Introduction -->
+      <section class="series-intro-1">
+        <div class="container-1">
+          <div class="two-column-1">
+            <div class="series-intro-left-1">
+              <div class="intro-eyebrow-1">A Four-Part Investigation</div>
+              <h2 class="series-title-1">Understanding the MTA Bus System Today</h2>
+              <p class="series-description-1">
+                The NYC bus network faces multiple pressures: ridership is still recovering from the pandemic, fare evasion is climbing, speeds are declining, and costs remain high. At the same time, redesigns and expanded bus lanes suggest ways the system can improve. This report examines buses through four lenses—ridership, performance, efficiency, and finances—to show how the network is performing and where it can be strengthened.
+              </p>
+            </div>
+            
+            <div class="series-intro-right-1">
+              <div class="series-parts-1">
+                <div class="series-part-1">
+                  <div class="part-number-1">01</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Riding the Numbers</h3>
+                    <p class="part-summary-1">We examine who is riding NYC buses, who is paying, and how fare evasion affects the system’s finances.</p>
+                    <div class="part-meta-1">Data Analysis • Performance Metrics</div>
+                  </div>
+                </div>
+                
+                <div class="series-part-1">
+                  <div class="part-number-1">02</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">On the Move</h3>
+                    <p class="part-summary-1">This section looks at speed, reliability, wait times, and network coverage to measure bus performance.</p>
+                    <div class="part-meta-1">Economic Analysis • Policy Research</div>
+                  </div>
+                </div>
+                
+                <div class="series-part-1">
+                  <div class="part-number-1">03</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Value in Motion</h3>
+                    <p class="part-summary-1">We combine performance, service, and financial data to show how efficiently the bus system delivers value.</p>
+                    <div class="part-meta-1">Innovation • Urban Planning</div>
+                  </div>
+                </div>
+                <div class="series-part-1">
+                  <div class="part-number-1">04</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Dollars & Sense</h3>
+                    <p class="part-summary-1">Here we review revenue, subsidies, costs, and capital investment to assess the fiscal health of NYC buses.</p>
+                    <div class="part-meta-1">Innovation • Urban Planning</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+            <div class="data-showcase">
+                <div class="data-card">
+                    <div class="data-number">308M</div>
+                    <div class="data-label">Non-Paying Bus Riders</div>
+                    <div class="data-context">Estimated fare evaders on NYC buses in 2024</div>
+                </div>
+                
+                <div class="data-card">
+                    <div class="data-number">353M</div>
+                    <div class="data-label">Paying Bus Riders</div>
+                    <div class="data-context">Estimated fare-paying passengers in 2024</div>
+                </div>
+                
+                <div class="data-card">
+                    <div class="data-number">46.6%</div>
+                    <div class="data-label">Fare Evasion Rate</div>
+                    <div class="data-context">Share of riders not paying on NYC buses (2024–2025)</div>
+                </div>
+                              
+            </div> 
+        </section>
+
+        <!-- Content Sections -->
+        <div class="content-grid">
+            
+            <!-- Section 01 -->
+            <section class="content-section">
+                <div class="section-number">01</div>
+                <h2 class="section-title">What’s Happening Now</h2>
+                <p class="section-intro">Fare evasion on NYC buses has surged to record levels, with nearly half of all riders now boarding without paying. This shift has created a two-tier system, where paying passengers are often the minority. The increase—from around 20% pre-pandemic to over 44% today—reflects economic strain, limited enforcement, and outdated fare systems, especially on local routes.
+                    Despite efforts like EAGLE Teams and awareness campaigns, evasion remains high. These patterns suggest enforcement alone won’t solve the problem.</p>
+            </section>
+
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <!-- Replace with your Observable Plot visualization -->
+                        <div id="fare-passenger-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/graph1.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+                    <!-- Type 2: Visualization + Visualization -->
+                    <!-- Type 3: Text + Visualization -->
+        <section>
+            <h2 class="section-title">Text + Visualization Layout</h2>
+            <p class="section-intro">Editorial content with supporting data visualization.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>Performance Insights</h3>
+                        <p>The correlation between employee engagement scores and productivity metrics has become increasingly evident across our dataset. Organizations with higher engagement consistently demonstrate superior performance.</p>
+                        
+                        <p>This relationship manifests most clearly in customer satisfaction ratings, where engaged teams deliver experiences that drive measurable business outcomes.</p>
+                        
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                        <p>What's particularly striking is the compound effect—teams with high engagement not only perform better individually but also create positive spillover effects.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chart-feature">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Engagement vs Performance</h3>
+                            <p class="chart-description">Correlation analysis of key metrics across departments.</p>
+                        </div>
+                        <div class="chart-content">
+                            <div id="subway-evasion-plot" class="plot-container"></div>
+    
+                            <!-- Load your visualization script -->
+                            <script type="module" src="./assets/js/plotSubwayEvasion.js"></script> </div>
+                        </div>
+                        <div class="chart-credits">
+                            <span>Source: HR Analytics</span>
+                            <span>N=2,847 employees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- Insight Box -->
+            <div class="insight-box">
+                <h3 class="insight-title">The Intelligence Imperative</h3>
+                <p class="insight-content">Organizations that have successfully implemented intelligent data architectures report 340% improvements in decision-making speed and 156% increases in strategic accuracy, fundamentally altering their competitive positioning within their respective markets.</p>
+            </div>
+
+            <!-- Data Showcase -->
+            <div class="data-showcase">
+                <div class="data-card">
+                    <div class="data-number">89%</div>
+                    <div class="data-label">Implementation Success</div>
+                    <div class="data-context">Organizations reporting successful architecture transformation</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">€2.4B</div>
+                    <div class="data-label">Investment Volume</div>
+                    <div class="data-context">Global spend on intelligent data systems</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">156%</div>
+                    <div class="data-label">Efficiency Gains</div>
+                    <div class="data-context">Average improvement in processing capabilities</div>
+                </div>
+                <div class="data-card">
+                    <div class="data-number">43ms</div>
+                    <div class="data-label">Response Time</div>
+                    <div class="data-context">Median query processing speed</div>
+                </div>
+            </div>
+
+            <!-- Featured Quote -->
+            <div class="featured-quote">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">The organizations that will thrive in the next decade are those that view data architecture not as infrastructure, but as the foundation of organizational intelligence.</p>
+                <div class="quote-attribution">Dr. Elena Rodriguez, Strategic Technology Institute</div>
+            </div>
+
+            <!-- Section 02 -->
+            <section class="content-section">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Future Architectures</h2>
+                <p class="section-intro">Emerging patterns suggest a movement toward distributed, autonomous data systems that can adapt and evolve without human intervention, creating new possibilities for organizational agility and responsiveness.</p>
+                
+                <div class="editorial-text">
+                    <p>The next generation of data architecture embodies principles of biological evolution—systems that learn, adapt, and optimize themselves in response to changing environmental conditions. This represents a fundamental departure from static, predetermined structures toward dynamic, intelligent ecosystems.</p>
+                    <p>These architectures incorporate advanced machine learning capabilities at their core, enabling predictive scaling, autonomous optimization, and self-healing mechanisms that dramatically reduce operational overhead while improving performance and reliability.</p>
+                </div>
+            </section>
+
+            <!-- Comprehensive Dashboard -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <!-- Replace with your Observable Plot visualization -->
+                        <div id="bus-projection-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/mckin_proj.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="bus-evasion-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/plotBusEvasion.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="fare-passenger-plot" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/graph1.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="fare-evasion-bar" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/graph2.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="waffle-chart" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/waffle.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>
+            <!-- Primary Visualization -->
+            <div class="chart-feature">
+                <div class="chart-header">
+                    <h3 class="chart-title">Global Data Architecture Evolution</h3>
+                    <p class="chart-description">A comprehensive view of organizational transformation patterns across industries, highlighting the migration from legacy systems to intelligent data ecosystems over the past five years.</p>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-placeholder">
+                        <div id="revenue-line" class="plot-container"></div>
+
+                        <!-- Load your visualization script -->
+                        <script type="module" src="./assets/js/revenue_df.js"></script> </div>
+                    </div>
+                <div class="chart-credits">
+                    <span>Source: Global Enterprise Research Initiative</span>
+                    <span>Updated Quarterly • Next: October 2025</span>
+                </div>
+            </div>    
+        </div>
+        <section>
+            <h2 class="section-title">Text + Text Layout</h2>
+            <p class="section-intro">Two columns of editorial content side by side.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>The Data Revolution</h3>
+                        <p>The digital transformation of modern enterprises has fundamentally altered how organizations approach data management and analysis. Traditional hierarchical structures are giving way to more fluid, network-based models that prioritize agility and responsiveness.</p>
+                        
+                        <p>This shift represents more than just technological advancement—it embodies a philosophical change in how we conceptualize organizational knowledge and decision-making processes.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>Real-Time Analytics</h3>
+                        <p>The emergence of real-time analytics platforms has created unprecedented opportunities for immediate course correction and adaptive strategy implementation. Organizations can now respond to market shifts within hours rather than quarters.</p>
+                        
+                        <p>However, this capability comes with its own set of challenges. The pressure to act on immediate data can sometimes overshadow the importance of long-term strategic thinking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="section-title">Text + Text Layout</h2>
+            <p class="section-intro">Two columns of editorial content side by side.</p>
+            
+            <div class="row">
+                <div class="column">
+                    <div class="editorial-text">
+                        <h3>The Data Revolution</h3>
+                        <p>The digital transformation of modern enterprises has fundamentally altered how organizations approach data management and analysis. Traditional hierarchical structures are giving way to more fluid, network-based models that prioritize agility and responsiveness.</p>
+                        
+                        <p>This shift represents more than just technological advancement—it embodies a philosophical change in how we conceptualize organizational knowledge and decision-making processes.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="feature-column">
+                        <div class="column-subtitle">Primary Analysis</div>
+                        <h3 class="column-title">The Economics of Free Transit</h3>
+                        <p class="column-text">While fare revenue represents a significant portion of transit funding, the total cost of fare collection—including infrastructure, enforcement, and administrative overhead—often consumes 15-25% of collected revenue.</p>
+                        <p class="column-text">When accounting for reduced operational complexity, improved service reliability, and increased ridership, the net financial impact of eliminating fares may be less dramatic than initially perceived.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Primary Visualization -->
+<div class="chart-feature">
+    <div class="chart-header">
+      <h3 class="chart-title">Fare Payment & Transfers</h3>
+      <p class="chart-description">
+        A Sankey diagram showing the breakdown of fare-paying and non-paying passengers,
+        and those who transfer to the subway.
+      </p>
+    </div>
+  
+    <div class="chart-content">
+      <div class="chart-placeholder">
+        <!-- 🔁 Sankey will be rendered here -->
+        <div id="fare-sankey" class="plot-container"></div>
+  
+        <!-- ✅ Import and run Sankey script -->
+        <script type="module">
+          import { drawSankey } from './assets/js/sankey_fare.js';
+          drawSankey('fare-sankey');
+        </script>
+      </div>
+    </div>
+  
+    <div class="chart-credits">
+      <span>Source: MTA Passenger Flow Data</span>
+      <span>Updated: August 2025</span>
+    </div>
+  </div>
+  <div class="demo-section">
+    <div class="demo-label">Feature Column Layout</div>
+    <div class="three-column-feature">
+        <div class="feature-column">
+            <div class="column-subtitle">Primary Analysis</div>
+            <h3 class="column-title">The Economics of Free Transit</h3>
+            <p class="column-text">While fare revenue represents a significant portion of transit funding, the total cost of fare collection—including infrastructure, enforcement, and administrative overhead—often consumes 15-25% of collected revenue.</p>
+            <p class="column-text">When accounting for reduced operational complexity, improved service reliability, and increased ridership, the net financial impact of eliminating fares may be less dramatic than initially perceived.</p>
+        </div>
+        <div class="supporting-column">
+            <div class="column-subtitle">Supporting Data</div>
+            <h4 class="column-title">Implementation Costs</h4>
+            <p class="column-text">Analysis of implementation costs across different transit systems.</p>
+        </div>
+        <div class="supporting-column">
+            <div class="column-subtitle">Case Studies</div>
+            <h4 class="column-title">Real-World Examples</h4>
+            <p class="column-text">Examining successful free transit programs in various cities.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Timeline Section -->
+<div class="demo-section">
+    <div class="demo-label">3-Column Timeline Process</div>
+    <div class="three-column-timeline">
+        <div class="timeline-step">
+            <div class="step-number">1</div>
+            <h4 class="column-title">Assessment Phase</h4>
+            <p class="column-text">Comprehensive analysis of current fare collection costs, ridership patterns, and revenue streams to establish baseline metrics.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="step-number sage">2</div>
+            <h4 class="column-title">Pilot Program</h4>
+            <p class="column-text">Limited implementation on select routes to test operational impacts, ridership changes, and system performance under fare-free conditions.</p>
+        </div>
+        <div class="timeline-step">
+            <div class="step-number blue">3</div>
+            <h4 class="column-title">Full Implementation</h4>
+            <p class="column-text">System-wide rollout with alternative funding mechanisms, enhanced service capacity, and comprehensive monitoring of outcomes.</p>
+        </div>
+    </div>
+</div>
+  
+        <!-- Footer -->
+        <footer class="content-footer">
+            <h4 class="footer-title">Research Methodology</h4>
+            <p class="footer-text">This comprehensive analysis draws from an extensive 18-month research initiative, incorporating quantitative data from 150+ organizations across 30 countries, combined with qualitative insights from industry leaders and strategic technology experts. All findings are validated through multiple analytical frameworks and peer review processes.</p>
+        </footer>
+    </div>
+    <header class="header-1">
+        <div class="container-1">
+          <div class="header-content-1">
+            <div class="magazine-title-1">Insight</div>
+            <div class="issue-info-1">Urban Mobility</div>
+          </div>
+        </div>
+      </header>
+    
+      <!-- Hero Section -->
+      <section class="hero-1">
+        <div class="container-1">
+          <div class="two-column-1">
+            <div class="hero-left-1">
+              <div class="hero-category-1">Transit Analysis</div>
+              <h1 class="hero-title-1">MTA Buses Are in Crisis. Is Free the Fix?</h1>
+            </div>
+            <div class="hero-right-1">
+              <p class="hero-subtitle-1">
+                What the numbers reveal about NYC's struggling bus system—and the bold solution that might save it.
+              </p>
+              <div class="hero-meta-1">
+                A comprehensive investigation into the future of urban mobility in America's largest city, examining data-driven solutions to systemic transit challenges.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Series Introduction -->
+      <section class="series-intro-1">
+        <div class="container-1">
+          <div class="two-column-1">
+            <div class="series-intro-left-1">
+              <div class="intro-eyebrow-1">A Three-Part Investigation</div>
+              <h2 class="series-title-1">The Future of MTA Buses</h2>
+              <p class="series-description-1">
+                NYC's bus system is at a tipping point. With ridership in flux, fare evasion climbing, and technology rapidly evolving, how can we reimagine the bus system to be faster, fairer, and more financially sustainable?
+              </p>
+            </div>
+            
+            <div class="series-intro-right-1">
+              <div class="series-parts-1">
+                <div class="series-part-1">
+                  <div class="part-number-1">01</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Crisis by the Numbers</h3>
+                    <p class="part-summary-1">An inside look at fare evasion, service performance, and why the system is breaking down—fueled by the latest MTA data.</p>
+                    <div class="part-meta-1">Data Analysis • Performance Metrics</div>
+                  </div>
+                </div>
+                
+                <div class="series-part-1">
+                  <div class="part-number-1">02</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Is Free the Future?</h3>
+                    <p class="part-summary-1">The economics of fare-free transit—costs, benefits, and how NYC could fund a bold new model.</p>
+                    <div class="part-meta-1">Economic Analysis • Policy Research</div>
+                  </div>
+                </div>
+                
+                <div class="series-part-1">
+                  <div class="part-number-1">03</div>
+                  <div class="part-content-1">
+                    <h3 class="part-title-1">Redesigning the Ride</h3>
+                    <p class="part-summary-1">Policy and technology ideas to make MTA buses faster, smarter, and more rider-friendly in the years ahead.</p>
+                    <div class="part-meta-1">Innovation • Urban Planning</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Data Visualization Section -->
+      <section class="visualization-section-1">
+        <div class="container-1">
+          <div class="two-column-1">
+            <div class="viz-left-1">
+              <div class="viz-eyebrow-1">Data Insights</div>
+              <h2 class="viz-title-1">The Numbers Tell the Story</h2>
+              <p class="viz-description-1">
+                Real-time analysis of MTA bus performance reveals the scope of the crisis. These visualizations, built from the latest operational data, showcase the urgent need for systemic change.
+              </p>
+            </div>
+            
+            <div class="viz-right-1">
+              <div class="viz-grid-1">
+                <div class="viz-container-1">
+                  <div class="viz-header-1">
+                    <h4 class="viz-chart-title-1">Fare Evasion Trends</h4>
+                    <p class="viz-chart-subtitle-1">Monthly evasion rates across boroughs</p>
+                  </div>
+                  <div class="chart-container-1">
+                    <div class="chart-placeholder-1">
+                      <div class="chart-placeholder-icon-1">📊</div>
+                      <div class="chart-placeholder-text-1">Fare Evasion Chart</div>
+                      <div class="chart-placeholder-subtext-1">Replace with fare_evasion_chart.png</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="viz-container-1">
+                  <div class="viz-header-1">
+                    <h4 class="viz-chart-title-1">Ridership Decline</h4>
+                    <p class="viz-chart-subtitle-1">Daily ridership vs pre-pandemic levels</p>
+                  </div>
+                  <div class="chart-container-1">
+                    <div class="chart-placeholder-1">
+                      <div class="chart-placeholder-icon-1">📈</div>
+                      <div class="chart-placeholder-text-1">Ridership Trends Chart</div>
+                      <div class="chart-placeholder-subtext-1">Replace with ridership_trends_chart.png</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Timeline -->
+      <section class="timeline-section-1">
+        <div class="container-1">
+          <div class="two-column-1">
+            <div class="timeline-left-1">
+              <div class="timeline-eyebrow-1">Implementation</div>
+              <h2 class="timeline-title-1">A Path Forward</h2>
+              <p class="timeline-description-1">
+                A strategic roadmap for transforming NYC's bus system through measured implementation and continuous evaluation.
+              </p>
+            </div>
+            
+            <div class="timeline-right-1">
+              <div class="timeline-steps-1">
+                <div class="timeline-step-1">
+                  <div class="step-number-1">1</div>
+                  <div class="step-content-1">
+                    <h4 class="step-title-1">Assessment Phase</h4>
+                    <p class="step-description-1">Comprehensive analysis of current fare collection costs, ridership patterns, and revenue streams to establish baseline metrics.</p>
+                    <div class="step-meta-1">6 Months • Data Collection</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-step-1">
+                  <div class="step-number-1">2</div>
+                  <div class="step-content-1">
+                    <h4 class="step-title-1">Pilot Program</h4>
+                    <p class="step-description-1">Limited implementation on select routes to test operational impacts, ridership changes, and system performance under fare-free conditions.</p>
+                    <div class="step-meta-1">12 Months • Select Routes</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-step-1">
+                  <div class="step-number-1">3</div>
+                  <div class="step-content-1">
+                    <h4 class="step-title-1">Full Implementation</h4>
+                    <p class="step-description-1">System-wide rollout with alternative funding mechanisms, enhanced service capacity, and comprehensive monitoring of outcomes.</p>
+                    <div class="step-meta-1">24 Months • System-Wide</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Additional Charts Section -->
+      <section class="additional-charts-section-1">
+        <div class="container-1">
+          <div class="additional-charts-header-1">
+            <div class="charts-eyebrow-1">Supporting Analysis</div>
+            <h2 class="charts-title-1">Comparative Performance Metrics</h2>
+            <p class="charts-description-1">
+              Additional data perspectives that inform policy decisions and operational improvements across the transit system.
+            </p>
+          </div>
+          
+          <div class="side-by-side-charts-1">
+            <div class="viz-container-1">
+              <div class="viz-header-1">
+                <h4 class="viz-chart-title-1">Cost Efficiency Analysis</h4>
+                <p class="viz-chart-subtitle-1">Operating costs per mile by service type</p>
+              </div>
+              <div class="chart-container-1">
+                <div class="chart-placeholder-1">
+                  <div class="chart-placeholder-icon-1">💰</div>
+                  <div class="chart-placeholder-text-1">Cost Analysis Chart</div>
+                  <div class="chart-placeholder-subtext-1">Replace with cost_analysis_chart.png</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="viz-container-1">
+              <div class="viz-header-1">
+                <h4 class="viz-chart-title-1">Service Reliability</h4>
+                <p class="viz-chart-subtitle-1">On-time performance by route category</p>
+              </div>
+              <div class="chart-container-1">
+                <div class="chart-placeholder-1">
+                  <div class="chart-placeholder-icon-1">⏱️</div>
+                  <div class="chart-placeholder-text-1">Reliability Chart</div>
+                  <div class="chart-placeholder-subtext-1">Replace with reliability_chart.png</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <div class="footer-space-1"></div>
+</body>
+</html>

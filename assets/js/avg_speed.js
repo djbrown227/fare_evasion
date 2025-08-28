@@ -16,9 +16,9 @@ async function drawAvgSpeedLines() {
   // Define color mapping
   const colorMap = {
     "Weekday Off-Peak": "#FF9B00",
-    "Weekday Peak": "#FF5733",
-    "Weekend Off-Peak": "#0077CC",
-    "Weekend Peak": "#33C3FF"
+    "Weekday Peak": "#FF0000",
+    "Weekend Off-Peak": "#2D9CDB",
+    "Weekend Peak": "#0000FF"
   };
 
   // Convert years to strings for proper tick labels
@@ -28,7 +28,7 @@ async function drawAvgSpeedLines() {
   const tickYears = uniqueYears.map(String); // show all years on x-axis
 
   // Years to label: first year, 2019, 2025
-  const labelYears = [uniqueYears[0], 2019, 2025];
+  const labelYears = [uniqueYears[0], 2018, 2025];
 
   // Prepare label data
   const labelData = raw.filter(d => labelYears.includes(d.year));
@@ -39,7 +39,7 @@ async function drawAvgSpeedLines() {
     marginLeft: 100,
     marginRight: 100,
     marginBottom: 100,
-    marginTop: 100,
+    marginTop: 50,
     style: { background: "#fff", fontFamily: "Helvetica" },
     x: {
       label: "Year",
@@ -96,7 +96,7 @@ async function drawAvgSpeedLines() {
         x: "year_str",
         y: "avg_speed_weighted",
         text: d => `${d.avg_speed_weighted} mph`,
-        dx: 0,
+        dx: -0,
         dy: -15,
         fontSize: 14,
         fontWeight: "bold",

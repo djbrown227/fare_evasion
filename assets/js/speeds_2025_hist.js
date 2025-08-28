@@ -77,7 +77,7 @@ async function drawHistogram() {
 
       Plot.axisX({
         scale: "x",
-        label: "",
+        label: "MPH",
         fontSize: 16,
         labelFont: "Helvetica",
         labelFontSize: 18,

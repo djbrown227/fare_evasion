@@ -79,7 +79,7 @@ async function drawLineChartWithLabels() {
         y: "Fare Evasion_ridership",
         text: d => `${(d["Fare Evasion_ridership"] * 100).toFixed(1)}%`,
         dy: 15,
-        dx: -2,
+        dx: 5,
         fontWeight: "bold",
         fontSize: 16, // <-- font size for data labels
         textAnchor: "start"
