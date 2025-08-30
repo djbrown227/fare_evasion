@@ -1,0 +1,85 @@
+<div>
+    <input type="range" id="year-slider" min="2017" max="2018" step="1" value="2017">
+    <span id="year-label">2017</span>
+    <button id="play-btn">Play</button>
+  </div>
+  <div id="histogram"></div>
+  
+  <script type="module">
+  import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+  import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+  
+  // Make up a dataset for two years
+  const data = [
+    // 2017
+    ...Array.from({length: 50}, () => ({year: 2017, value: 1 + Math.random()*3})),
+    // 2018
+    ...Array.from({length: 50}, () => ({year: 2018, value: 2 + Math.random()*2}))
+  ];
+  
+  const histogramDiv = document.getElementById("histogram");
+  const slider = document.getElementById("year-slider");
+  const yearLabel = document.getElementById("year-label");
+  const playBtn = document.getElementById("play-btn");
+  
+  let currentYear = +slider.value;
+  let interval;
+  
+  // Function to draw histogram for a given year
+  function drawHistogram(year) {
+    const filtered = data.filter(d => d.year === year);
+    histogramDiv.innerHTML = "";
+  
+    const plot = Plot.plot({
+      width: 600,
+      height: 400,
+      marginLeft: 60,
+      marginBottom: 50,
+      style: {background: "#fff"},
+      marks: [
+        Plot.axisX({label: "Value"}),
+        Plot.axisY({label: "Count", grid: true}),
+        Plot.rectY(filtered, Plot.binX({x: "value", thresholds: 10}), {fill: "#FF9B00", fillOpacity: 0.7}),
+        Plot.ruleY([d3.mean(filtered, d => d.value)], {
+          stroke: "red",
+          strokeDasharray: "4,2",
+          strokeWidth: 2,
+          title: `Mean: ${d3.mean(filtered, d => d.value).toFixed(2)}`
+        })
+      ],
+      x: {domain: [0, d3.max(data, d => d.value) * 1.1]},
+      y: {grid: true}
+    });
+  
+    histogramDiv.appendChild(plot);
+  }
+  
+  // Initial draw
+  drawHistogram(currentYear);
+  
+  // Slider event
+  slider.addEventListener("input", e => {
+    currentYear = +e.target.value;
+    yearLabel.textContent = currentYear;
+    drawHistogram(currentYear);
+  });
+  
+  // Play button
+  playBtn.addEventListener("click", () => {
+    if(interval) {
+      clearInterval(interval);
+      interval = null;
+      playBtn.textContent = "Play";
+    } else {
+      playBtn.textContent = "Pause";
+      interval = setInterval(() => {
+        currentYear++;
+        if(currentYear > 2018) currentYear = 2017;
+        slider.value = currentYear;
+        yearLabel.textContent = currentYear;
+        drawHistogram(currentYear);
+      }, 1000);
+    }
+  });
+  </script>
+  
