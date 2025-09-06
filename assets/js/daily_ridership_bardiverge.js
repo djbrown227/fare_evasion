@@ -88,7 +88,8 @@ const chart = Plot.plot({
         dy: -5,
         fontSize: 16,
         fill: "Black",
-        textAnchor: "start"
+        textAnchor: "start",
+        fontWeight: "bold"
       }
     )
   ]
