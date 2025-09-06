@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reveal.js Advanced Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+
+    <!-- Code highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+
+    <style>
+      h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; }
+      .chart-container { margin: 2rem auto; max-width: 600px; }
+      .fragment.highlight-red { color: red; }
+      .fragment.strike { text-decoration: line-through; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Slide 1: Background video -->
+        <section data-background-video="https://www.w3schools.com/html/mov_bbb.mp4" data-background-video-loop="true">
+          <h1 style="color: white; text-shadow: 2px 2px 5px black;">Reveal.js Advanced</h1>
+        </section>
+
+        <!-- Slide 2: Styled fragments -->
+        <section>
+          <h2>Reveal.js Tricks</h2>
+          <p class="fragment">✨ Auto-animate transitions</p>
+          <p class="fragment highlight-red">📊 Live charts with animation</p>
+          <p class="fragment strike">❌ Static boring slides</p>
+        </section>
+
+        <!-- Slide 3 + 4: Auto-animate shapes -->
+        <section data-auto-animate>
+          <h2>Auto-animate Shapes</h2>
+          <div style="width:100px;height:100px;background:#0077cc;border-radius:10px;"></div>
+        </section>
+        <section data-auto-animate>
+          <h2>Auto-animate Shapes</h2>
+          <div style="width:200px;height:200px;background:#00aa55;border-radius:100px;"></div>
+        </section>
+
+        <!-- Vertical stack: Slide 5a + 5b -->
+        <section>
+          <section>
+            <h2>Vertical Slide 1</h2>
+            <p>Use vertical stacks for drill-downs</p>
+          </section>
+          <section>
+            <h2>Vertical Slide 2</h2>
+            <p>Swipe or arrow down to navigate</p>
+          </section>
+        </section>
+
+        <!-- Slide 6: Math (KaTeX plugin) -->
+        <section>
+          <h2>Math Support</h2>
+          <p>Einstein said:</p>
+          <p>$$E = mc^2$$</p>
+        </section>
+
+        <!-- Slide 7: Chart animation fragments -->
+        <section>
+          <h2>Chart Animation</h2>
+          <div id="chart-animate" class="chart-container"></div>
+          <p class="fragment">Step 1: Revenue line appears</p>
+          <p class="fragment">Step 2: Profit line appears</p>
+        </section>
+
+        <!-- Slide 8: Background image -->
+        <section data-background="https://picsum.photos/1600/900?blur" data-transition="convex">
+          <h2 style="color:white; text-shadow: 1px 1px 4px black;">Beautiful backgrounds</h2>
+        </section>
+
+        <!-- Slide 9: Quiz -->
+        <section data-transition="cube">
+          <h2>Quick Quiz</h2>
+          <ol>
+            <li class="fragment">Reveal.js was created by?
+              <ul>
+                <li class="fragment">Elon Musk</li>
+                <li class="fragment">Hakim El Hattab ✅</li>
+                <li class="fragment">Linus Torvalds</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Reveal.js -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+    <!-- D3 & Observable Plot -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script type="module">
+      import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+      Reveal.initialize({
+        hash: true,
+        transition: 'fade',
+        backgroundTransition: 'slide',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+      });
+
+      // Chart data
+      const data = [
+        {year: 2021, revenue: 100, profit: 20},
+        {year: 2022, revenue: 140, profit: 30},
+        {year: 2023, revenue: 180, profit: 50}
+      ];
+
+      // Create chart container
+      const chartContainer = document.getElementById("chart-animate");
+
+      // Chart only revenue
+      const revenueChart = Plot.plot({
+        marks: [
+          Plot.line(data, {x: "year", y: "revenue", stroke: "#0077cc", strokeWidth: 3}),
+          Plot.dot(data, {x: "year", y: "revenue", fill: "#0077cc"})
+        ],
+        x: {label: "Year"},
+        y: {label: "Value"},
+        width: 600,
+        height: 400
+      });
+
+      // Chart with revenue + profit
+      const fullChart = Plot.plot({
+        marks: [
+          Plot.line(data, {x: "year", y: "revenue", stroke: "#0077cc", strokeWidth: 3}),
+          Plot.line(data, {x: "year", y: "profit", stroke: "#00aa55", strokeWidth: 3}),
+          Plot.dot(data, {x: "year", y: "revenue", fill: "#0077cc"}),
+          Plot.dot(data, {x: "year", y: "profit", fill: "#00aa55"})
+        ],
+        x: {label: "Year"},
+        y: {label: "Value"},
+        width: 600,
+        height: 400
+      });
+
+      // Append first chart
+      chartContainer.appendChild(revenueChart);
+
+      // On fragment show, swap in the full chart
+      Reveal.on("fragmentshown", event => {
+        if (event.fragment.innerText.includes("Profit")) {
+          chartContainer.innerHTML = "";
+          chartContainer.appendChild(fullChart);
+        }
+      });
+    </script>
+  </body>
+</html>

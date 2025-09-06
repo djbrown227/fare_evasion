@@ -3,18 +3,18 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 // Data with custom colors per bar
 const ridershipData = [
-  { Year: "2014", AvgDaily: 2.171596e+06, color: "#2D9CDB" },
-  { Year: "2015", AvgDaily: 2.126250e+06, color: "#2D9CDB" },
-  { Year: "2016", AvgDaily: 2.093234e+06, color: "#2D9CDB" },
-  { Year: "2017", AvgDaily: 1.985848e+06, color: "#2D9CDB" },
-  { Year: "2018", AvgDaily: 1.892629e+06, color: "#2D9CDB" },
-  { Year: "2019", AvgDaily: 1.856406e+06, color: "#2D9CDB" },
-  { Year: "2020", AvgDaily: 4.038019e+05, color: "#FF9B00" },
-  { Year: "2021", AvgDaily: 1.045583e+06, color: "#FF9B00" },
-  { Year: "2022", AvgDaily: 1.161498e+06, color: "#FF9B00" },
-  { Year: "2023", AvgDaily: 1.165862e+06, color: "#FF9B00" },
-  { Year: "2024", AvgDaily: 1.120198e+06, color: "#FF9B00" },
-  { Year: "2025*", AvgDaily: 1.080813e+06, color: "lightcoral", Projected: true }
+  { Year: "2014", AvgDaily: 2.171596e+06, color: "lightgray" },
+  { Year: "2015", AvgDaily: 2.126250e+06, color: "lightgray" },
+  { Year: "2016", AvgDaily: 2.093234e+06, color: "lightgray" },
+  { Year: "2017", AvgDaily: 1.985848e+06, color: "lightgray" },
+  { Year: "2018", AvgDaily: 1.892629e+06, color: "lightgray" },
+  { Year: "2019", AvgDaily: 1.856406e+06, color: "lightgray" },
+  { Year: "2020", AvgDaily: 4.038019e+05, color: "#2D9CDB" },
+  { Year: "2021", AvgDaily: 1.045583e+06, color: "#2D9CDB" },
+  { Year: "2022", AvgDaily: 1.161498e+06, color: "#2D9CDB" },
+  { Year: "2023", AvgDaily: 1.165862e+06, color: "#2D9CDB" },
+  { Year: "2024", AvgDaily: 1.120198e+06, color: "#2D9CDB" },
+  { Year: "2025*", AvgDaily: 1.080813e+06, color: "#FF9B00", Projected: true }
 ];
 
 // Compute average
@@ -70,7 +70,27 @@ const chart = Plot.plot({
       label: "Year",
       fontSize: 14,
       labelFont: "Helvetica"
-    })
+    }),
+    // Annotation text for 2025*
+    Plot.text(
+      [
+        {
+          Year: "2025*",
+          divergence: ridershipData.find(d => d.Year === "2025*").divergence,
+          label: "Projected: 1.08M riders\n(Down from 2.17M in 2014)"
+        }
+      ],
+      {
+        x: d => d.divergence + 100000, // push text to right of bar
+        y: "Year",
+        text: "label",
+        dx: 100,
+        dy: -5,
+        fontSize: 16,
+        fill: "Black",
+        textAnchor: "start"
+      }
+    )
   ]
 });
 
