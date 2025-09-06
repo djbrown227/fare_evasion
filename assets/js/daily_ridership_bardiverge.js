@@ -61,14 +61,14 @@ const chart = Plot.plot({
     Plot.axisX({
       scale: "x",
       label: "Deviation from Average Daily Ridership",
-      fontSize: 14,
+      fontSize: 16,
       labelFont: "Helvetica",
       tickFormat: d3.format(".2s")
     }),
     Plot.axisY({
       scale: "y",
       label: "Year",
-      fontSize: 14,
+      fontSize: 16,
       labelFont: "Helvetica"
     }),
     // Annotation text for 2025*

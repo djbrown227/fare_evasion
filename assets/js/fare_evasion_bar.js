@@ -16,7 +16,7 @@ const chart = Plot.plot({
   style: { background: "#fff", fontFamily: "Helvetica" },
   y: {
     domain: [0, 50],   // adjust as needed
-    label: "Percent of Respondents",
+    label: "Fare Evasion",
     tickFormat: d => d + "%"
   },
   x: {
@@ -55,7 +55,7 @@ const chart = Plot.plot({
     // Explicit Y-axis
     Plot.axisY({
       scale: "y",
-      label: "Percent of Respondents",
+      label: "Fare Evasion",
       fontSize: 16,
       labelFont: "Helvetica",
       labelFontSize: 14,

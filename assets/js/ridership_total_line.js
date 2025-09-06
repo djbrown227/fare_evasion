@@ -77,13 +77,13 @@ async function drawYearlyRidershipLine() {
       }),
 
       // Dots
-      //Plot.dot(raw, {
-        //x: "Year_clean",
-        //y: "Ridership",
-        //r: 5,
-        //fill: d => (d.Projected ? "steelblue" : "#FF9B00"),
-        //title: d => `${d.Year}: ${d3.format(",")(d.Ridership)}`
-      //}),
+      Plot.dot(labeled, {
+        x: "Year_clean",
+        y: "Ridership",
+        r: 5,
+        fill: d => (d.Projected ? "#FF9B00" : "#FF9B00"),
+        title: d => `${d.Year}: ${d3.format(",")(d.Ridership)}`
+      }),
 
       // 👉 Labels with "Projected" note for 2025*
       Plot.text(labeled, {
@@ -97,7 +97,7 @@ async function drawYearlyRidershipLine() {
         fontWeight: "bold",
         fontSize: 16,
         textAnchor: "start",
-        fill: d => (d.Projected ? "steelblue" : "#FF9B00")
+        fill: d => (d.Projected ? "black" : "black")
       }),
 
       Plot.ruleY([0])

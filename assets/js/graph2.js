@@ -20,7 +20,7 @@ async function drawLineChartWithLabels() {
 
   const chart = Plot.plot({
     width: 900,
-    height: 500,
+    height: 600,
     marginLeft: 100,
     marginRight: 100,
     marginBottom: 100,
@@ -64,7 +64,7 @@ async function drawLineChartWithLabels() {
         x: "date",
         y: "Fare Evasion_ridership",
         stroke: "#FF9B00",
-        strokeWidth: 4,
+        strokeWidth: 5,
         curve: "monotone-x"
       }),
       Plot.dot(labeled, {
