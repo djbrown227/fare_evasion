@@ -28,8 +28,8 @@ async function drawHistogram() {
   });
 
   const chart = Plot.plot({
-    width: 800,
-    height: 500,
+    width: 1000,
+    height: 600,
     marginLeft: 80,
     marginBottom: 80,
     marginTop: 50,

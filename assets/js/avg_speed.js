@@ -35,10 +35,10 @@ async function drawAvgSpeedLines() {
 
   const chart = Plot.plot({
     width: 1000,
-    height: 500,
-    marginLeft: 100,
-    marginRight: 100,
-    marginBottom: 100,
+    height: 600,
+    marginLeft: 80,
+    marginRight: 80,
+    marginBottom: 80,
     marginTop: 50,
     style: { background: "#fff", fontFamily: "Helvetica" },
     x: {
