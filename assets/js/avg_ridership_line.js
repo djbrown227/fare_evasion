@@ -32,9 +32,9 @@ async function drawDailyRidershipLine() {
 
   const chart = Plot.plot({
     width: 900,
-    height: 500,
+    height: 600,
     marginLeft: 100,
-    marginRight: 200,
+    marginRight: 150,
     marginBottom: 100,
     marginTop: 100,
     style: { background: "#fff", fontFamily: "Helvetica" },
@@ -76,17 +76,17 @@ async function drawDailyRidershipLine() {
       Plot.line(raw, {
         x: "Year_clean",
         y: "Average Daily Ridership",
-        stroke: "#0077CC", // blue for distinction
+        stroke: "#FF9B00", // blue for distinction
         strokeWidth: 4,
         curve: "monotone-x"
       }),
 
       // Dots
-      Plot.dot(raw, {
+      Plot.dot(labeled, {
         x: "Year_clean",
         y: "Average Daily Ridership",
         r: 5,
-        fill: d => (d.Projected ? "orange" : "#0077CC"),
+        fill: d => (d.Projected ? "orange" : "#FF9B00"),
         title: d => `${d.Year}: ${formatMillions(d["Average Daily Ridership"])}`
       }),
 
@@ -102,7 +102,7 @@ async function drawDailyRidershipLine() {
         fontWeight: "bold",
         fontSize: 16,
         textAnchor: "start",
-        fill: d => (d.Projected ? "orange" : "#0077CC")
+        fill: d => (d.Projected ? "black" : "black")
       }),
 
       Plot.ruleY([0])

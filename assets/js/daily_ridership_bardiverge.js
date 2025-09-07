@@ -27,10 +27,11 @@ ridershipData.forEach(d => {
 
 // Create diverging horizontal bar chart with light vertical grid marks
 const chart = Plot.plot({
-  width: 700,
-  height: 700,
+  width: 900,
+  height: 800,
   marginLeft: 80,
   marginBottom: 80,
+  marginRight:100,
   marginTop: 100,
   style: { background: "#fff", fontFamily: "Helvetica" },
   x: {
@@ -77,7 +78,7 @@ const chart = Plot.plot({
         {
           Year: "2025*",
           divergence: ridershipData.find(d => d.Year === "2025*").divergence,
-          label: "Projected: 1.08M riders\n(Down from 2.17M in 2014)"
+          label: "2025 Projection: Almost 500K \nbelow the 10 year average\n"
         }
       ],
       {
