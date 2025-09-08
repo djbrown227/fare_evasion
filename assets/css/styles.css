@@ -250,10 +250,14 @@
 
     /* Text Content */
     .editorial-text {
-        font-size: 1rem;
-        line-height: 1.8;
-        color: var(--text-charcoal);
-    }
+      font-size: 1.125rem;
+      color: var(--text-medium);
+      margin-bottom: 0rem;
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 65ch;
+      margin-top: 3rem;
+  }
 
     .editorial-text p {
         margin-bottom: 1.5rem;

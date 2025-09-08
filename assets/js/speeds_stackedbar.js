@@ -68,7 +68,7 @@ async function drawStackedBar() {
       // Explicit axes
       Plot.axisX({
         scale: "x",
-        label: "Bus Routes",
+        label: "",
         fontSize: 14,
         labelFont: "Helvetica",
         labelFontSize: 16
@@ -93,7 +93,7 @@ async function drawStackedBar() {
 
       // Percentage labels
       Plot.text(pctDataWithOffsets, {
-        x: () => "All Routes",
+        x: () => "",
         y: d => d.yMid,
         text: d => `${d.percent.toFixed(1)}%`,
         fill: d => d.bin === "5–7 mph" ? "black" : "gray",
