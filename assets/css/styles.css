@@ -212,7 +212,7 @@
     }
 
     .chart-content {
-        padding: 3rem 2rem;
+        padding: 1rem 1rem;
         min-height: 300px;
         display: flex;
         align-items: center;
@@ -440,7 +440,7 @@
 
         .chart-content,
         .chart-header {
-            padding: 2rem 1.5rem;
+            padding: 1rem 1rem;
         }
 
         .insight-box {
