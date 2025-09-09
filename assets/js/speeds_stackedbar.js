@@ -44,9 +44,10 @@ async function drawStackedBar() {
   });
 
   const chart = Plot.plot({
-    width: 600,
+    width: 700,
     height: 500,
-    marginLeft: 80,
+    marginLeft: 50,
+    marginRight:50,
     marginBottom: 80,
     marginTop:50,
     style: { background: "#fff", fontFamily: "Helvetica" },

@@ -923,8 +923,8 @@ body {
 
   .two-column-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 3fr 4fr;
+    gap: 50px;
     align-items: start;
   }
 
@@ -1273,7 +1273,7 @@ body {
   .viz-container-1 {
     background: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 5px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid var(--border-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1348,7 +1348,7 @@ body {
   }
 
   .footer-space-1 {
-    height: 120px;
+    height: 60px;
   }
 
   /* Additional Charts Section */
