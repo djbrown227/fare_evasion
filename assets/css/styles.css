@@ -161,7 +161,7 @@
         margin-bottom: 1.5rem;
         line-height: 1.2;
         letter-spacing: -0.01em;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     .section-intro {
@@ -256,7 +256,7 @@
       font-weight: 300;
       line-height: 1.7;
       max-width: 65ch;
-      margin-top: 3rem;
+      margin-top: 1.5rem;
   }
 
     .editorial-text p {
@@ -1225,6 +1225,7 @@ body {
   .visualization-section-1 {
     padding: 140px 0;
     background: var(--accent-beige);
+    margin-top: 7rem;
   }
 
   .viz-left-1 {
