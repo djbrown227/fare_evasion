@@ -1273,7 +1273,7 @@ body {
   .viz-container-1 {
     background: white;
     border-radius: 12px;
-    padding: 5px;
+    padding: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     border: 1px solid var(--border-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
