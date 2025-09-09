@@ -1,14 +1,14 @@
 import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-async function drawBusStopVsTravel() {
-  const raw = await d3.csv("data/processed/df_times.csv", d3.autoType);
+async function drawJourneyVsWait() {
+  const raw = await d3.csv("data/processed/df_journey.csv", d3.autoType);
 
   // Melt into long format
   const melted = [];
   raw.forEach(d => {
-    melted.push({ year: d.year, metric: "Bus Stop Time", value: d.additional_bus_stop_time });
-    melted.push({ year: d.year, metric: "Travel Time", value: d.additional_travel_time });
+    melted.push({ year: d.year, metric: "Journey Time Performance", value: d.customer_journey_time_performance });
+    melted.push({ year: d.year, metric: "Avg Wait Assessment", value: d.avg_wait_assessment });
   });
 
   // Convert years to strings for ticks
@@ -22,9 +22,13 @@ async function drawBusStopVsTravel() {
 
   // Color mapping
   const colorMap = {
-    "Bus Stop Time": "#FF9B00",
-    "Travel Time": "#2D9CDB"
+    "Journey Time Performance": "#FF9B00",
+    "Avg Wait Assessment": "#2D9CDB"
   };
+
+  // === Set your y-axis domain + ticks here ===
+  const yDomain = [0.60, 0.85];     // 60% to 85%
+  const yTicks = [0.60, 0.65, 0.70, 0.75, 0.80, 0.85]; // adjust as needed
 
   const chart = Plot.plot({
     width: 900,
@@ -40,8 +44,10 @@ async function drawBusStopVsTravel() {
       ticks: tickYears
     },
     y: {
-      label: "Minutes",
-      domain: [0, d3.max(melted, d => d.value) * 1.1]
+      label: "Score (%)",
+      domain: yDomain,
+      ticks: yTicks,
+      tickFormat: d3.format(".0%")   // format as whole percentages
     },
     color: {
       domain: Object.keys(colorMap),
@@ -51,11 +57,11 @@ async function drawBusStopVsTravel() {
     marks: [
       // Y-axis
       Plot.axisY({
-        label: "Minutes",
+        label: "Score (%)",
         fontSize: 16,
         labelFont: "Helvetica",
         labelFontSize: 16,
-        ticks: 7
+        tickFormat: d3.format(".0%")
       }),
 
       // X-axis
@@ -82,14 +88,14 @@ async function drawBusStopVsTravel() {
         y: "value",
         fill: "metric",
         r: 4,
-        title: d => `${d.year} ${d.metric}: ${d.value.toFixed(2)} min`
+        title: d => `${d.year} ${d.metric}: ${(d.value * 100).toFixed(0)}%`
       }),
 
-      // Labels (first, 2019, 2025)
+      // Labels (2017, 2019, 2025)
       Plot.text(labelData, {
         x: "year_str",
         y: "value",
-        text: d => `${d.value.toFixed(2)} min`,
+        text: d => `${(d.value * 100).toFixed(0)}%`,
         dy: -17,
         dx: 12,
         fontSize: 14,
@@ -102,7 +108,7 @@ async function drawBusStopVsTravel() {
     ]
   });
 
-  document.getElementById("bus-stop-travel-line").appendChild(chart);
+  document.getElementById("journey-wait-line").appendChild(chart);
 }
 
-drawBusStopVsTravel();
+drawJourneyVsWait();
