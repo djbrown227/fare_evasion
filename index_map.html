@@ -5,7 +5,7 @@
   <title>Deck.gl + Google Maps + GeoJSON Gradient + Clock</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/deck.gl@9.0.0/dist.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAU01hVE0gFD80GNVqSFkf6sJJrldaa9k"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDku2ET0bzz5zPTAXNLUYMnjy9KZVd7B0o"></script>
   <style>
     body { margin: 0; padding: 0; }
     #map { width: 100%; height: 100vh; }
@@ -14,7 +14,7 @@
     #clock {
       position: absolute;
       top: 20px;
-      left: 20px;
+      left: 1100px;
       padding: 8px 12px;
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
@@ -27,7 +27,7 @@
     #legend {
         position: absolute;
         top: 60px; /* below the clock */
-        left: 20px;
+        left: 1100px;
         width: 200px;
         height: 20px;
         background: linear-gradient(to right, red, yellow, green);
@@ -100,24 +100,34 @@
         }
 
         // Create the overlay initially with empty data
-        const overlay = new deck.GoogleMapsOverlay({
-          layers: [
-            new deck.PathLayer({
-              id: "bus-routes",
-              data: [],
-              getPath: d => d.path,
-              getColor: d => getColorForSpeed(d.properties.speed),
-              getWidth: 5,
-              widthUnits: "pixels",
-              pickable: true,
-              onClick: info => {
-                if (info.object) {
-                  alert(`Route: ${info.object.properties.route_id}, Speed: ${info.object.properties.speed.toFixed(1)} mph, Hour: ${info.object.properties.hour}`);
-                }
-              }
-            })
-          ]
-        });
+// Create the overlay initially with empty data
+const overlay = new deck.GoogleMapsOverlay({
+  layers: [
+    new deck.PathLayer({
+      id: "bus-routes",
+      data: [],
+      getPath: d => d.path,
+      getColor: d => getColorForSpeed(d.properties.speed),
+      getWidth: 5,
+      widthUnits: "pixels",
+      pickable: true
+    })
+  ],
+  getTooltip: ({object}) => {
+    if (!object) return null;
+    const props = object.properties;
+    return {
+      text: `Route: ${props.route_id}\nSpeed: ${props.speed.toFixed(1)} mph\nHour: ${props.hour}`,
+      style: {
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        color: "white",
+        fontSize: "12px",
+        padding: "6px"
+      }
+    };
+  }
+});
+
         overlay.setMap(map);
 
         // Clock element
@@ -145,7 +155,7 @@
           clockEl.textContent = `Hour: ${currentHour}:00`;
 
           currentHour = (currentHour + 1) % 24; // loop 0-23
-          setTimeout(animate, 500); // change hour every 5 seconds
+          setTimeout(animate, 300); // change hour every 5 seconds
         }
 
         animate();

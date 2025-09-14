@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bus Speed Data Story</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+  <style>
+    /* Optional: make text pop in a little smoother */
+    .reveal section h2, 
+    .reveal section p, 
+    .reveal section img, 
+    .reveal section video {
+      transition: all 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Deck.gl video -->
+      <section data-transition="slide">
+        <h2 class="fragment fade-in">Deck.gl Animation</h2>
+        <video controls autoplay loop width="800" class="fragment fade-in">
+          <source src="deckgl_demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Slide 2: Explain code solution -->
+      <section data-transition="convex">
+        <h2 class="fragment fade-in">Code Solution: Deck.gl + Google Maps</h2>
+        <p class="fragment fade-in">
+          This visualization shows the <strong>average bus speeds for 2025</strong>, 
+          aggregated for <strong>each hour of the day</strong> across NYC bus routes.
+        </p>
+        <p class="fragment fade-in">
+          Built with <strong>Deck.gl</strong> and a <strong>Google Maps base</strong>, 
+          it allows animation, interactivity, and full customization.
+        </p>
+      </section>
+
+      <!-- Slide 3: Static Kepler.gl -->
+      <section data-transition="zoom">
+        <h2 class="fragment fade-in">Kepler.gl Static Map</h2>
+        <img src="assets/images/Screenshot 2025-09-12 at 10.35.19 AM.png" 
+             alt="Kepler.gl static bus speed map" width="800" class="fragment fade-in">
+      </section>
+
+      <!-- Slide 4: Minimal code solution -->
+      <section data-transition="fade">
+        <h2 class="fragment fade-in">Minimal Code Solution</h2>
+        <p class="fragment fade-in">
+          With <strong>Kepler.gl</strong>, you can <strong>drag & drop</strong> the dataset 
+          and instantly create great geospatial visualizations.
+        </p>
+        <p class="fragment fade-in">Perfect for quick insights and storytelling.</p>
+      </section>
+
+      <!-- Slide 5: Hackathon Question -->
+      <section data-transition="slide">
+        <h2 class="fragment fade-in">Your Turn!</h2>
+        <p class="fragment fade-in">How familiar are you with working on <strong>geospatial data</strong>?</p>
+        <p class="fragment fade-in">What tools have you used before? (Kepler.gl, QGIS, Deck.gl, etc.)</p>
+        <p class="fragment fade-in">Share your experience in the comments!</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      transition: 'slide', // default transition for slides
+      transitionSpeed: 'fast',
+      backgroundTransition: 'fade'
+    });
+  </script>
+</body>
+</html>
